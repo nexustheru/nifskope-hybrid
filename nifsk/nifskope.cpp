@@ -1,5 +1,6 @@
 #include "nifskope.h"
 #include <headers.h>
+const struct aiScene* scene = NULL;
 
 void Ui_MainWindow::setValue(QString value)
 {
@@ -7,6 +8,16 @@ void Ui_MainWindow::setValue(QString value)
         m_value = value;
         emit valueChanged(value);
     }
+}
+
+ void Ui_MainWindow::importscene(void)
+{
+
+	QString fileName = QFileDialog::getOpenFileName(this,
+	QObject::tr("Open File"), "/home/jana", QObject::tr("Image Files (*.png *.jpg *.bmp)"));
+	const char* filename;
+	scene = aiImportFile(filename,aiProcessPreset_TargetRealtime_MaxQuality);
+
 }
 
 int HK_CALL main( int argc,char* argv[])

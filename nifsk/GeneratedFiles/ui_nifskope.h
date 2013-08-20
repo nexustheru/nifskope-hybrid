@@ -1,3 +1,14 @@
+/********************************************************************************
+** Form generated from reading UI file 'nifskope.ui'
+**
+** Created: Wed Aug 21 01:46:13 2013
+**      by: Qt User Interface Compiler version 4.8.4
+**
+** WARNING! All changes made in this file will be lost when recompiling UI file!
+********************************************************************************/
+
+#ifndef UI_NIFSKOPE_H
+#define UI_NIFSKOPE_H
 
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
@@ -17,16 +28,11 @@
 #include <QtGui/QTableWidget>
 #include <QtGui/QTreeView>
 #include <QtGui/QWidget>
-#include <QTGui/qfiledialog.h>
-#include <QtGui/qdesktopservices.h>
-#include <qdesktopservices.h>
-#include <QtGui/qdesktopwidget.h>
 
 QT_BEGIN_NAMESPACE
 
-class Ui_MainWindow : public QMainWindow
+class Ui_MainWindow
 {
-	Q_OBJECT
 public:
     QAction *actionLoad;
     QAction *actionSave_as;
@@ -130,19 +136,8 @@ public:
     QMenu *menuOptimize;
     QMenu *menuHelp;
     QStatusBar *statusbar;
-	QString m_value;
-	char* thefilename;
 
-	//button events
-    Q_SIGNALS:
-    void valueChanged(QString newValue);
-
-	public Q_SLOTS:
-    void setValue(QString value);
-    void importscene(void);
-	//
-
- void setupUi(QMainWindow *MainWindow)
+    void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
@@ -509,9 +504,7 @@ public:
         menuHelp->addAction(actionAbout_nifskope);
 
         retranslateUi(MainWindow);
-		//the buttonslink//
-		//QObject::connect(lineEdit, SIGNAL(setValue(QString)), lineEdit_2, SLOT(valueChanged));
-		QObject::connect(actionImport_obj, SIGNAL(clicked()), lineEdit_2, SLOT(importscene()));
+
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
 
@@ -619,3 +612,5 @@ namespace Ui {
 } // namespace Ui
 
 QT_END_NAMESPACE
+
+#endif // UI_NIFSKOPE_H

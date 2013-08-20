@@ -50,7 +50,7 @@
       <Filter>Header Files</Filter>
     </CustomBuild>
     <CustomBuild Include="nifskope.ui">
-      <Filter>Form Files</Filter>
+      <Filter>Generated Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

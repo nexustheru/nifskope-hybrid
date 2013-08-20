@@ -3,6 +3,12 @@
 //assimp
 #include <assimp\Importer.hpp>
 #include <assimp\Exporter.hpp>
+#include <assimp\scene.h>
+#include <assimp\mesh.h>
+#include <assimp\config.h>
+#include <assimp\material.h>
+#include <assimp\cimport.h>
+#include <assimp\postprocess.h>
 //niflib
 
 #include <niflib.h>
