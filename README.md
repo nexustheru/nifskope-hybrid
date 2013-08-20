@@ -63,3 +63,6 @@ PLY
 
 <a href="http://tinypic.com?ref=mtkyfb" target="_blank"><img src="http://i44.tinypic.com/mtkyfb.jpg" border="0" alt="Image and video hosting by TinyPic"></a>
 
+
+
+NOT FINISHED YET! long way to go still missing functions, icons and alot
