@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'nifskope.ui'
 **
-** Created: Wed Aug 21 01:46:13 2013
+** Created: Wed Aug 21 15:01:10 2013
 **      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -102,9 +102,7 @@ public:
     QTableWidget *tableWidget;
     QGroupBox *groupBox;
     QTreeView *treeView;
-    QPushButton *pushButton_12;
     QLineEdit *lineEdit;
-    QLineEdit *lineEdit_2;
     QGraphicsView *graphicsView;
     QGroupBox *groupBox_2;
     QPushButton *pushButton_7;
@@ -123,7 +121,6 @@ public:
     QMenuBar *menubar;
     QMenu *menuFile;
     QMenu *menuImport;
-    QMenu *menuExport;
     QMenu *menuView;
     QMenu *menuBlock_list;
     QMenu *menuBlock_details;
@@ -295,15 +292,9 @@ public:
         treeView = new QTreeView(groupBox);
         treeView->setObjectName(QString::fromUtf8("treeView"));
         treeView->setGeometry(QRect(5, 50, 291, 371));
-        pushButton_12 = new QPushButton(groupBox);
-        pushButton_12->setObjectName(QString::fromUtf8("pushButton_12"));
-        pushButton_12->setGeometry(QRect(240, 10, 51, 21));
         lineEdit = new QLineEdit(groupBox);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(0, 10, 121, 20));
-        lineEdit_2 = new QLineEdit(groupBox);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
-        lineEdit_2->setGeometry(QRect(130, 10, 111, 20));
+        lineEdit->setGeometry(QRect(0, 10, 291, 20));
         graphicsView = new QGraphicsView(centralwidget);
         graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
         graphicsView->setGeometry(QRect(320, 50, 661, 371));
@@ -394,8 +385,6 @@ public:
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         menuImport = new QMenu(menuFile);
         menuImport->setObjectName(QString::fromUtf8("menuImport"));
-        menuExport = new QMenu(menuFile);
-        menuExport->setObjectName(QString::fromUtf8("menuExport"));
         menuView = new QMenu(menubar);
         menuView->setObjectName(QString::fromUtf8("menuView"));
         menuBlock_list = new QMenu(menuView);
@@ -432,7 +421,6 @@ public:
         menuFile->addSeparator();
         menuFile->addAction(actionSave_as);
         menuFile->addAction(menuImport->menuAction());
-        menuFile->addAction(menuExport->menuAction());
         menuFile->addAction(actionAutosanitze_before_save);
         menuFile->addAction(actionNew_Window);
         menuFile->addAction(actionReaload_xml_and_nif);
@@ -441,7 +429,6 @@ public:
         menuFile->addAction(actionResource_file);
         menuImport->addAction(actionImport_3ds);
         menuImport->addAction(actionImport_obj);
-        menuExport->addAction(actionExport_3ds);
         menuView->addAction(actionReset_block_details);
         menuView->addAction(actionInteractive_view);
         menuView->addAction(actionBlock_list);
@@ -576,7 +563,6 @@ public:
         actionHide_mismatched->setText(QApplication::translate("MainWindow", "hide version mismatched rows", 0, QApplication::UnicodeUTF8));
         actionReset_block_details_2->setText(QApplication::translate("MainWindow", "reset block details", 0, QApplication::UnicodeUTF8));
         groupBox->setTitle(QString());
-        pushButton_12->setText(QApplication::translate("MainWindow", "save as", 0, QApplication::UnicodeUTF8));
         groupBox_2->setTitle(QString());
         pushButton_7->setText(QString());
         pushButton_6->setText(QString());
@@ -591,7 +577,6 @@ public:
         pushButton_11->setText(QApplication::translate("MainWindow", "reset block details", 0, QApplication::UnicodeUTF8));
         menuFile->setTitle(QApplication::translate("MainWindow", "file", 0, QApplication::UnicodeUTF8));
         menuImport->setTitle(QApplication::translate("MainWindow", "Import", 0, QApplication::UnicodeUTF8));
-        menuExport->setTitle(QApplication::translate("MainWindow", "Export", 0, QApplication::UnicodeUTF8));
         menuView->setTitle(QApplication::translate("MainWindow", "View", 0, QApplication::UnicodeUTF8));
         menuBlock_list->setTitle(QApplication::translate("MainWindow", "block list", 0, QApplication::UnicodeUTF8));
         menuBlock_details->setTitle(QApplication::translate("MainWindow", "block details", 0, QApplication::UnicodeUTF8));

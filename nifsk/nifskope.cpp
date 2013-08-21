@@ -1,6 +1,66 @@
 #include "nifskope.h"
 #include <headers.h>
+
+#define private public
+#define protected public
+
 const struct aiScene* scene = NULL;
+
+void getcases(QString etc)
+{
+	if(etc.contains(".hkx")==true)
+	{
+		
+	}
+	else if(etc.contains(".nif")==true)
+	{
+
+	}
+	else if(etc.contains(".kfm")==true)
+	{
+
+	}
+	else if(etc.contains(".obj")==true)
+	{
+
+	}
+	else if(etc.contains(".3ds")==true)
+	{
+
+	}
+	else if(etc.contains(".DAE")==true)
+	{
+
+	}
+	else if(etc.contains(".fbx")==true)
+	{
+
+	}
+	else if(etc.contains(".ase")==true)
+	{
+
+	}
+	else if(etc.contains(".blend")==true)
+	{
+
+	}
+	else if(etc.contains(".x")==true)
+	{
+
+	}
+	else if(etc.contains(".xml")==true)
+	{
+
+	}
+	else if(etc.contains(".mdl")==true)
+	{
+
+	}
+	else
+	{
+
+	}
+}
 
 void Ui_MainWindow::saveas(void)
 {
@@ -10,12 +70,14 @@ void Ui_MainWindow::saveas(void)
 	std::string test="file has been saved as " + fileName.toStdString();
 	msgBox.setText(QString::fromStdString((test)));
 	msgBox.exec();
+	
 }
 
 void Ui_MainWindow::importhkx(void)
 {
 	QString fileName = QFileDialog::getOpenFileName(this,
 	QObject::tr("Import Hkx File"), "/home/jana", QObject::tr("File formats (*.hkx)"));
+	getcases(fileName);
 	const char* fname=fileName.toStdString().c_str();
 	Ui_MainWindow::lineEdit->setText(fileName.toStdString().c_str());
 }

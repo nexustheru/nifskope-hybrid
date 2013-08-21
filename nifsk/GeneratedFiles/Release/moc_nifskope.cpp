@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'nifskope.h'
 **
-** Created: Wed Aug 21 01:46:13 2013
+** Created: Wed Aug 21 15:01:10 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -28,24 +28,21 @@ static const uint qt_meta_data_Ui_MainWindow[] = {
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       1,       // signalCount
-
- // signals: signature, parameters, type, tag, flags
-      24,   15,   14,   14, 0x05,
+       0,       // signalCount
 
  // slots: signature, parameters, type, tag, flags
-      52,   46,   14,   14, 0x0a,
-      70,   14,   14,   14, 0x0a,
-      95,   84,   14,   14, 0x0a,
-     117,   84,   14,   14, 0x0a,
+      15,   14,   14,   14, 0x0a,
+      29,   14,   14,   14, 0x0a,
+      41,   14,   14,   14, 0x0a,
+      61,   50,   14,   14, 0x0a,
+      83,   50,   14,   14, 0x0a,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_Ui_MainWindow[] = {
-    "Ui_MainWindow\0\0newValue\0valueChanged(QString)\0"
-    "value\0setValue(QString)\0importscene()\0"
-    "MainWindow\0setupUi(QMainWindow*)\0"
+    "Ui_MainWindow\0\0importscene()\0importhkx()\0"
+    "saveas()\0MainWindow\0setupUi(QMainWindow*)\0"
     "retranslateUi(QMainWindow*)\0"
 };
 
@@ -55,9 +52,9 @@ void Ui_MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         Q_ASSERT(staticMetaObject.cast(_o));
         Ui_MainWindow *_t = static_cast<Ui_MainWindow *>(_o);
         switch (_id) {
-        case 0: _t->valueChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 1: _t->setValue((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 2: _t->importscene(); break;
+        case 0: _t->importscene(); break;
+        case 1: _t->importhkx(); break;
+        case 2: _t->saveas(); break;
         case 3: _t->setupUi((*reinterpret_cast< QMainWindow*(*)>(_a[1]))); break;
         case 4: _t->retranslateUi((*reinterpret_cast< QMainWindow*(*)>(_a[1]))); break;
         default: ;
@@ -102,12 +99,5 @@ int Ui_MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 5;
     }
     return _id;
-}
-
-// SIGNAL 0
-void Ui_MainWindow::valueChanged(QString _t1)
-{
-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
-    QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_END_MOC_NAMESPACE
