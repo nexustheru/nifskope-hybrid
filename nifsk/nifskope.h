@@ -21,6 +21,7 @@
 #include <QtGui/qdesktopservices.h>
 #include <qdesktopservices.h>
 #include <QtGui/qdesktopwidget.h>
+#include <QtGui\qmessagebox.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -511,7 +512,7 @@ public:
         retranslateUi(MainWindow);
 		//the buttonslink//
 		//QObject::connect(lineEdit, SIGNAL(setValue(QString)), lineEdit_2, SLOT(valueChanged));
-		QObject::connect(actionImport_obj, SIGNAL(clicked()), lineEdit_2, SLOT(importscene()));
+		QObject::connect(actionImport_obj, SIGNAL(triggered(bool)), this, SLOT(importscene()));
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
 
@@ -526,9 +527,9 @@ public:
         actionReload_xml->setText(QApplication::translate("MainWindow", "Reload xml", 0, QApplication::UnicodeUTF8));
         actionXml_checker->setText(QApplication::translate("MainWindow", "xml checker", 0, QApplication::UnicodeUTF8));
         actionResource_file->setText(QApplication::translate("MainWindow", "Resource file", 0, QApplication::UnicodeUTF8));
-        actionImport_3ds->setText(QApplication::translate("MainWindow", "import 3ds", 0, QApplication::UnicodeUTF8));
-        actionImport_obj->setText(QApplication::translate("MainWindow", "import obj", 0, QApplication::UnicodeUTF8));
-        actionExport_3ds->setText(QApplication::translate("MainWindow", "export 3ds", 0, QApplication::UnicodeUTF8));
+        actionImport_3ds->setText(QApplication::translate("MainWindow", "import hkx", 0, QApplication::UnicodeUTF8));
+        actionImport_obj->setText(QApplication::translate("MainWindow", "import file", 0, QApplication::UnicodeUTF8));
+        actionExport_3ds->setText(QApplication::translate("MainWindow", "export file", 0, QApplication::UnicodeUTF8));
         actionReset_block_details->setText(QApplication::translate("MainWindow", "Reset block details", 0, QApplication::UnicodeUTF8));
         actionInteractive_view->setText(QApplication::translate("MainWindow", "interactive help", 0, QApplication::UnicodeUTF8));
         actionBlock_list->setText(QApplication::translate("MainWindow", "block list", 0, QApplication::UnicodeUTF8));

@@ -12,12 +12,11 @@ void Ui_MainWindow::setValue(QString value)
 
  void Ui_MainWindow::importscene(void)
 {
-
+	
 	QString fileName = QFileDialog::getOpenFileName(this,
-	QObject::tr("Open File"), "/home/jana", QObject::tr("Image Files (*.png *.jpg *.bmp)"));
-	const char* filename;
-	scene = aiImportFile(filename,aiProcessPreset_TargetRealtime_MaxQuality);
-
+	QObject::tr("Import File"), "/home/jana", QObject::tr("File formats (*.3DS *.BLEND *.DAE *.FBX *.IFC-STEP *.ASE *.DXF *.HMP *.MD2 *.MD3 *.MD5 *.MDC *.MDL *.NFF *.PLY *.STL *.X *.OBJ *.SMD *.LWO *.LXO *.LWS *.TER *.AC3D *.MS3D *.COB *.Q3BSP *.XGL *.CSM *.BVH *.B3D *.NDO *.Ogre *.XML *.Q3D)"));
+	scene = aiImportFile((fileName.toStdString().c_str()),aiProcessPreset_TargetRealtime_MaxQuality);
+	Ui_MainWindow::lineEdit->setText(fileName.toStdString().c_str());
 }
 
 int HK_CALL main( int argc,char* argv[])
