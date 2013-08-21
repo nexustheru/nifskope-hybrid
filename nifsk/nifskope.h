@@ -138,6 +138,8 @@ public:
 	void saveas(void);
 	//
 
+static void build_hkxscene(const char* filename);
+
  void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())

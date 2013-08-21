@@ -6,11 +6,31 @@
 
 const struct aiScene* scene = NULL;
 
+void Ui_MainWindow::build_hkxscene(const char* filename)
+{
+	hkIstream stream(filename);
+	hkResource* resource = hkSerializeUtil::load(stream.getStreamReader());
+	hkBool32 failed = true;
+	if (resource->getAllocatedSize() >0 )
+	{
+     hkpRigidBody* root=resource->getContents<hkpRigidBody>();
+	 QMessageBox msgBox;
+	 msgBox.setText("ok");
+	 msgBox.exec();
+	}
+	else
+	{
+		 QMessageBox msgBox;
+	 msgBox.setText("no");
+	 msgBox.exec();
+	}
+}
+
 void getcases(QString etc)
 {
 	if(etc.contains(".hkx")==true)
 	{
-		
+		Ui_MainWindow::build_hkxscene(etc.toStdString().c_str());
 	}
 	else if(etc.contains(".nif")==true)
 	{

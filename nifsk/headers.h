@@ -109,6 +109,10 @@
 #include <Physics/Collide/Shape/Convex/Box/hkpBoxShape.h>
 #include <Physics/Dynamics/Entity/hkpRigidBody.h>
 
+#define RETURN_FAIL_IF(COND, MSG) \
+	HK_MULTILINE_MACRO_BEGIN \
+		if(COND) { HK_ERROR(0x53a6a026, MSG); return 1; } \
+	HK_MULTILINE_MACRO_END
 
 static void HK_CALL errorReport(const char* msg, void* userContext)
 {
