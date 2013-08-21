@@ -63,35 +63,12 @@
       </rect>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_12">
-     <property name="geometry">
-      <rect>
-       <x>240</x>
-       <y>10</y>
-       <width>51</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>save as</string>
-     </property>
-    </widget>
     <widget class="QLineEdit" name="lineEdit">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>10</y>
-       <width>121</width>
-       <height>20</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_2">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>10</y>
-       <width>111</width>
+       <width>291</width>
        <height>20</height>
       </rect>
      </property>
@@ -361,17 +338,10 @@
      <addaction name="actionImport_3ds"/>
      <addaction name="actionImport_obj"/>
     </widget>
-    <widget class="QMenu" name="menuExport">
-     <property name="title">
-      <string>Export</string>
-     </property>
-     <addaction name="actionExport_3ds"/>
-    </widget>
     <addaction name="actionLoad"/>
     <addaction name="separator"/>
     <addaction name="actionSave_as"/>
     <addaction name="menuImport"/>
-    <addaction name="menuExport"/>
     <addaction name="actionAutosanitze_before_save"/>
     <addaction name="actionNew_Window"/>
     <addaction name="actionReaload_xml_and_nif"/>
