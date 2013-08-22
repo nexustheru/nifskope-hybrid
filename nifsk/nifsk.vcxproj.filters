@@ -44,6 +44,705 @@
     <ClCompile Include="GeneratedFiles\Release\moc_nifskope.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="compat\BGSGamebryoSequenceGenerator_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSBoneSwitchGenerator_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSBoneSwitchGeneratorBoneData_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSComputeAddBoneAnimModifier_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSCyclicBlendTransitionGenerator_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSDecomposeVectorModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSDirectAtModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSDistTriggerModifier_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSEventEveryNEventsModifier_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSEventOnDeactivateModifier_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSEventOnFalseToTrueModifier_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSGetTimeStepModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSInterpValueModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSIsActiveModifier_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSIStateManagerModifier_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSIStateManagerModifierBSiStateData_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSIStateManagerModifierBSIStateManagerStateListener_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSiStateTaggingGenerator_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSLimbIKModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSLookAtModifier_4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSLookAtModifierBoneData_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSModifyOnceModifier_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSOffsetAnimationGenerator_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSPassByTargetTriggerModifier_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSRagdollContactListenerModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSSpeedSamplerModifier_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSSynchronizedClipGenerator_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSTimerModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\BSTweenerModifier_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbAttachmentModifier_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbAttachmentSetup_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbAttributeModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbAttributeModifierAssignment_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbAuxiliaryNodeInfo_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbBehaviorEventsInfo_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbBehaviorGraph_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbBehaviorGraphData_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbBehaviorGraphInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbBehaviorGraphInternalStateInfo_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbBehaviorGraphStringData_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbBehaviorInfo_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbBehaviorInfoIdToNamePair_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbBehaviorReferenceGenerator_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbBindable_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbBlendCurveUtils_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbBlenderGenerator_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbBlenderGeneratorChild_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbBlenderGeneratorChildInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbBlenderGeneratorInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbBlendingTransitionEffect_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbBlendingTransitionEffectInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbBoneIndexArray_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbBoneWeightArray_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbBoolVariableSequencedData_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbBoolVariableSequencedDataSample_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbCameraShakeEventPayload_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbCharacter_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbCharacterAddedInfo_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbCharacterControlCommand_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbCharacterControllerControlData_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbCharacterControllerModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbCharacterControllerModifierInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbCharacterData_7.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbCharacterDataCharacterControllerInfo_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbCharacterInfo_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbCharacterSetup_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbCharacterSkinInfo_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbCharacterSteppedInfo_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbCharacterStringData_5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbClientCharacterState_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbClipGenerator_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbClipGeneratorEcho_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbClipGeneratorInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbClipTrigger_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbClipTriggerArray_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbCombineTransformsModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbCombineTransformsModifierInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbCompiledExpressionSet_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbCompiledExpressionSetToken_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbComputeDirectionModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbComputeDirectionModifierInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbComputeRotationFromAxisAngleModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbComputeRotationFromAxisAngleModifierInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbComputeRotationToTargetModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbComputeRotationToTargetModifierInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbCondition_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbContext_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbDampingModifier_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbDampingModifierInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbDefaultMessageLog_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbDelayedModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbDelayedModifierInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbDetectCloseToGroundModifier_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbDetectCloseToGroundModifierInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbEvaluateExpressionModifier_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbEvaluateExpressionModifierInternalExpressionData_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbEvaluateExpressionModifierInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbEvaluateHandleModifier_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbEvent_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbEventBase_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbEventDrivenModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbEventDrivenModifierInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbEventInfo_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbEventPayload_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbEventPayloadList_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbEventProperty_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbEventRaisedInfo_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbEventRangeData_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbEventRangeDataArray_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbEventSequencedData_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbEventSequencedDataSequencedEvent_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbEventsFromRangeModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbEventsFromRangeModifierInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbExpressionCondition_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbExpressionData_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbExpressionDataArray_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbExtractRagdollPoseModifier_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbFootIkControlData_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbFootIkControlsModifier_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbFootIkControlsModifierLeg_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbFootIkDriverInfo_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbFootIkDriverInfoLeg_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbFootIkGains_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbFootIkModifier_3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbFootIkModifierInternalLegData_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbFootIkModifierLeg_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbGenerator_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbGeneratorOutputListener_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbGeneratorSyncInfo_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbGeneratorSyncInfoSyncPoint_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbGeneratorTransitionEffect_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbGeneratorTransitionEffectInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbGetHandleOnBoneModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbGetUpModifier_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbGetUpModifierInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbGetWorldFromModelModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbGetWorldFromModelModifierInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbHandIkControlData_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbHandIkControlsModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbHandIkControlsModifierHand_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbHandIkDriverInfo_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbHandIkDriverInfoHand_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbHandIkModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbHandIkModifierHand_3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbHandle_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbIntEventPayload_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbIntVariableSequencedData_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbIntVariableSequencedDataSample_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbKeyframeBonesModifier_3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbKeyframeBonesModifierKeyframeInfo_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbLinkedSymbolInfo_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbLookAtModifier_3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbLookAtModifierInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbManualSelectorGenerator_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbManualSelectorGeneratorInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbMessageLog_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbMirroredSkeletonInfo_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbMirrorModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbModifierGenerator_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbModifierList_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbModifierWrapper_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbMoveCharacterModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbMoveCharacterModifierInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbNamedEventPayload_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbNamedIntEventPayload_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbNamedRealEventPayload_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbNamedStringEventPayload_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbNode_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbNodeInternalStateInfo_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbParticleSystemEventPayload_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbPoseMatchingGenerator_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbPoseMatchingGeneratorInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbPoweredRagdollControlData_3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbPoweredRagdollControlsModifier_5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbProjectData_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbProjectStringData_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbProxyModifier_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbProxyModifierProxyInfo_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbRaiseEventCommand_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbRealEventPayload_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbRealVariableSequencedData_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbRealVariableSequencedDataSample_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbReferencePoseGenerator_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbRegisteredGenerator_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbRigidBodyRagdollControlData_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbRigidBodyRagdollControlsModifier_3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbRoleAttribute_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbRotateCharacterModifier_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbRotateCharacterModifierInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbSenseHandleModifier_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbSenseHandleModifierRange_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbSequence_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbSequencedData_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbSequenceInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbSequenceStringData_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbSetBehaviorCommand_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbSetLocalTimeOfClipGeneratorCommand_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbSetNodePropertyCommand_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbSetWordVariableCommand_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbSetWorldFromModelModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbSimulationControlCommand_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbSimulationStateInfo_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbStateChooser_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbStateListener_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbStateMachine_4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbStateMachineActiveTransitionInfo_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbStateMachineDelayedTransitionInfo_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbStateMachineEventPropertyArray_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbStateMachineInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbStateMachineNestedStateMachineData_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbStateMachineProspectiveTransitionInfo_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbStateMachineStateInfo_4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbStateMachineTimeInterval_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbStateMachineTransitionInfo_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbStateMachineTransitionInfoArray_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbStateMachineTransitionInfoReference_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbStringCondition_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbStringEventPayload_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbTestStateChooser_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbTimerModifier_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbTimerModifierInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbTransformVectorModifier_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbTransformVectorModifierInternalState_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbTransitionEffect_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbTwistModifier_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbVariableBindingSet_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbVariableBindingSetBinding_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbVariableInfo_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbVariableValue_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbVariableValueSet_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbWorldEnums_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compat\hkbWorldFromModelModeData_0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="nifskope.h">
@@ -61,6 +760,711 @@
       <Filter>Generated Files</Filter>
     </ClInclude>
     <ClInclude Include="headers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BGSGamebryoSequenceGenerator_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSBoneSwitchGenerator_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSBoneSwitchGeneratorBoneData_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSComputeAddBoneAnimModifier_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSCyclicBlendTransitionGenerator_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSDecomposeVectorModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSDirectAtModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSDistTriggerModifier_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSEventEveryNEventsModifier_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSEventOnDeactivateModifier_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSEventOnFalseToTrueModifier_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSGetTimeStepModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSInterpValueModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSIsActiveModifier_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSIStateManagerModifier_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSIStateManagerModifierBSiStateData_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSIStateManagerModifierBSIStateManagerStateListener_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSiStateTaggingGenerator_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSLimbIKModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSLookAtModifier_4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSLookAtModifierBoneData_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSModifyOnceModifier_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSOffsetAnimationGenerator_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSPassByTargetTriggerModifier_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSRagdollContactListenerModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSSpeedSamplerModifier_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSSynchronizedClipGenerator_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSTimerModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\BSTweenerModifier_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbAttachmentModifier_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbAttachmentSetup_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbAttributeModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbAttributeModifierAssignment_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbAuxiliaryNodeInfo_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbBehaviorEventsInfo_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbBehaviorGraph_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbBehaviorGraphData_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbBehaviorGraphInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbBehaviorGraphInternalStateInfo_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbBehaviorGraphStringData_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbBehaviorInfo_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbBehaviorInfoIdToNamePair_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbBehaviorReferenceGenerator_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbBindable_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbBlendCurveUtils_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbBlenderGenerator_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbBlenderGeneratorChild_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbBlenderGeneratorChildInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbBlenderGeneratorInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbBlendingTransitionEffect_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbBlendingTransitionEffectInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbBoneIndexArray_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbBoneWeightArray_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbBoolVariableSequencedData_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbBoolVariableSequencedDataSample_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbCameraShakeEventPayload_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbCharacter_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbCharacterAddedInfo_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbCharacterControlCommand_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbCharacterControllerControlData_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbCharacterControllerModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbCharacterControllerModifierInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbCharacterData_7.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbCharacterDataCharacterControllerInfo_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbCharacterInfo_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbCharacterSetup_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbCharacterSkinInfo_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbCharacterSteppedInfo_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbCharacterStringData_5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbClientCharacterState_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbClipGenerator_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbClipGeneratorEcho_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbClipGeneratorInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbClipTrigger_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbClipTriggerArray_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbCombineTransformsModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbCombineTransformsModifierInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbCompiledExpressionSet_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbCompiledExpressionSetToken_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbComputeDirectionModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbComputeDirectionModifierInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbComputeRotationFromAxisAngleModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbComputeRotationFromAxisAngleModifierInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbComputeRotationToTargetModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbComputeRotationToTargetModifierInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbCondition_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbContext_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbDampingModifier_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbDampingModifierInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbDefaultMessageLog_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbDelayedModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbDelayedModifierInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbDetectCloseToGroundModifier_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbDetectCloseToGroundModifierInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbEvaluateExpressionModifier_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbEvaluateExpressionModifierInternalExpressionData_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbEvaluateExpressionModifierInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbEvaluateHandleModifier_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbEvent_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbEventBase_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbEventDrivenModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbEventDrivenModifierInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbEventInfo_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbEventPayload_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbEventPayloadList_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbEventProperty_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbEventRaisedInfo_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbEventRangeData_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbEventRangeDataArray_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbEventSequencedData_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbEventSequencedDataSequencedEvent_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbEventsFromRangeModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbEventsFromRangeModifierInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbExpressionCondition_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbExpressionData_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbExpressionDataArray_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbExtractRagdollPoseModifier_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbFootIkControlData_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbFootIkControlsModifier_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbFootIkControlsModifierLeg_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbFootIkDriverInfo_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbFootIkDriverInfoLeg_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbFootIkGains_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbFootIkModifier_3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbFootIkModifierInternalLegData_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbFootIkModifierLeg_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbGenerator_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbGeneratorOutputListener_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbGeneratorSyncInfo_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbGeneratorSyncInfoSyncPoint_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbGeneratorTransitionEffect_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbGeneratorTransitionEffectInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbGetHandleOnBoneModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbGetUpModifier_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbGetUpModifierInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbGetWorldFromModelModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbGetWorldFromModelModifierInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbHandIkControlData_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbHandIkControlsModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbHandIkControlsModifierHand_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbHandIkDriverInfo_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbHandIkDriverInfoHand_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbHandIkModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbHandIkModifierHand_3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbHandle_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbIntEventPayload_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbIntVariableSequencedData_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbIntVariableSequencedDataSample_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbKeyframeBonesModifier_3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbKeyframeBonesModifierKeyframeInfo_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbLinkedSymbolInfo_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbLookAtModifier_3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbLookAtModifierInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbManualSelectorGenerator_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbManualSelectorGeneratorInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbMessageLog_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbMirroredSkeletonInfo_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbMirrorModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbModifierGenerator_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbModifierList_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbModifierWrapper_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbMoveCharacterModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbMoveCharacterModifierInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbNamedEventPayload_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbNamedIntEventPayload_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbNamedRealEventPayload_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbNamedStringEventPayload_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbNode_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbNodeInternalStateInfo_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbParticleSystemEventPayload_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbPoseMatchingGenerator_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbPoseMatchingGeneratorInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbPoweredRagdollControlData_3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbPoweredRagdollControlsModifier_5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbProjectData_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbProjectStringData_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbProxyModifier_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbProxyModifierProxyInfo_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbRaiseEventCommand_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbRealEventPayload_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbRealVariableSequencedData_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbRealVariableSequencedDataSample_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbReferencePoseGenerator_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbRegisteredGenerator_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbRigidBodyRagdollControlData_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbRigidBodyRagdollControlsModifier_3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbRoleAttribute_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbRotateCharacterModifier_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbRotateCharacterModifierInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbSenseHandleModifier_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbSenseHandleModifierRange_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbSequence_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbSequencedData_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbSequenceInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbSequenceStringData_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbSetBehaviorCommand_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbSetLocalTimeOfClipGeneratorCommand_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbSetNodePropertyCommand_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbSetWordVariableCommand_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbSetWorldFromModelModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbSimulationControlCommand_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbSimulationStateInfo_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbStateChooser_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbStateListener_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbStateMachine_4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbStateMachineActiveTransitionInfo_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbStateMachineDelayedTransitionInfo_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbStateMachineEventPropertyArray_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbStateMachineInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbStateMachineNestedStateMachineData_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbStateMachineProspectiveTransitionInfo_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbStateMachineStateInfo_4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbStateMachineTimeInterval_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbStateMachineTransitionInfo_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbStateMachineTransitionInfoArray_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbStateMachineTransitionInfoReference_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbStringCondition_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbStringEventPayload_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbTestStateChooser_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbTimerModifier_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbTimerModifierInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbTransformVectorModifier_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbTransformVectorModifierInternalState_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbTransitionEffect_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbTwistModifier_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbVariableBindingSet_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbVariableBindingSetBinding_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbVariableInfo_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbVariableValue_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbVariableValueSet_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbWorldEnums_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkbWorldFromModelModeData_0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat\hkxreg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

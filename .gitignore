@@ -1,0 +1,9 @@
+nifsk.opensdf
+nifsk.sdf
+*.dll
+ipch/nifsk-e91fffc6/nifsk-4e468c01.ipch
+nifsk/Release/nifsk.log
+nifsk/sprintbehavior.hkx
+nifsk/untitled_Ragdoll.hkx
+Win32/Release/sprintbehavior.hkx
+Win32/Release/untitled_Ragdoll.hkx

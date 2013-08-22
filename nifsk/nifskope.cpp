@@ -54,18 +54,10 @@ void Ui_MainWindow::exportscene(void)
 	QObject::tr("Export File"), " ", QObject::tr("File formats (*.nif *.kfm *.hkx *.hkt *.3DS *.BLEND *.DAE *.FBX *.IFC-STEP *.ASE *.DXF *.HMP *.MD2 *.MD3 *.MD5 *.MDC *.MDL *.NFF *.PLY *.STL *.X *.OBJ *.SMD *.LWO *.LXO *.LWS *.TER *.AC3D *.MS3D *.COB *.Q3BSP *.XGL *.CSM *.BVH *.B3D *.NDO *.Ogre *.XML *.Q3D)"));
 }
 
-static void HK_CALL errorReport(const char* msg, void* userContext)
-{
-	using namespace std;
-	 QMessageBox msgBox;
-	 msgBox.setText(QString::fromUtf8(msg));
-	 msgBox.exec();
-}
-
-
 int HK_CALL main( int argc,char* argv[])
 {
-	hkMemoryRouter* memoryRouter = hkMemoryInitUtil::initDefault( hkMallocAllocator::m_defaultMallocAllocator, hkMemorySystem::FrameInfo(1024 * 1024) );
+	hkMallocAllocator baseMalloc;
+	hkMemoryRouter* memoryRouter = hkMemoryInitUtil::initDefault( &baseMalloc, hkMemorySystem::FrameInfo(1024 * 1024) );
 	hkBaseSystem::init( memoryRouter, errorReport );
 	QApplication app(argc, argv);
 	QMainWindow *widget = new QMainWindow;

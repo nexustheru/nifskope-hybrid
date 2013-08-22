@@ -1,5 +1,7 @@
 #define private public
 #define protected public
+
+
 //assimp
 #include <assimp\Importer.hpp>
 #include <assimp\Exporter.hpp>
@@ -108,6 +110,8 @@
 #include <Common/Serialize/Util/hkSerializeUtil.h>
 #include <Common/Serialize/Version/hkVersionPatchManager.h>
 #include <Common/Serialize/Data/hkDataObject.h>
+//#include <Common/Serialize/Util/hkBuiltinTypeRegistry.h>
+
 // Reflection
 #include <Common/Base/Reflection/hkClass.h>
 #include <Common/Base/Reflection/hkClassMember.h>
@@ -130,9 +134,14 @@
 #include <Physics/Utilities/Dynamics/Inertia/hkpInertiaTensorComputer.h>
 #include <Physics/Collide/Shape/Convex/Box/hkpBoxShape.h>
 #include <Physics/Dynamics/Entity/hkpRigidBody.h>
+
+static void HK_CALL errorReport(const char* msg, void* userContext)
+{
+	using namespace std;
+	 printf("%",msg);
+}
+
 #include <Common/Base/keycode.cxx>
-
-
 // [id=keycode]
 
 // [id=productfeatures]
@@ -148,7 +157,60 @@
 #undef HK_FEATURE_PRODUCT_MILSIM
 //#undef HK_FEATURE_PRODUCT_NEW_PHYSICS
 
+#define HK_CLASSES_FILE "hkxreg.h"
+//#include <Common/Serialize/Util/hkBuiltinTypeRegistry.cxx>
 #include <Common/Base/Config/hkProductFeatures.cxx>
+#undef HK_CLASSES_FILE
+
+#define DEFINE_CUSTOMPATCH_STUB(name) static void HK_CALL name(hkDataObject& obj){}
+DEFINE_CUSTOMPATCH_STUB(hkbMoveBoneTowardTargetModifier_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbSplinePathGenerator_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbAttachmentModifier_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbTimerModifier_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbTargetRigidBodyModifier_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbDetectCloseToGroundModifier_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbVariableBindingSetBinding_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbVariableBindingSet_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbNode_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbPositionRelativeSelectorGenerator_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbCheckRagdollSpeedModifier_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbFootIkModifierLeg_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbClipTrigger_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbClipGenerator_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbCatchFallModifier_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbStateMachineStateInfo_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbBehaviorGraphData_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbPoweredRagdollControlsModifier_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbStateMachine_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbKeyframeBonesModifier_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbBlenderGeneratorChild_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbRigidBodyRagdollModifier_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbJigglerGroup_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbStateMachineStateInfo_1_to_2)
+DEFINE_CUSTOMPATCH_STUB(hkbDemoConfig_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbVariableBindingSet_1_to_2)
+DEFINE_CUSTOMPATCH_STUB(hkbClipGenerator_1_to_2)
+DEFINE_CUSTOMPATCH_STUB(hkbRagdollController_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbRagdollModifier_1_to_2)
+DEFINE_CUSTOMPATCH_STUB(hkbPoweredRagdollControlsModifier_3_to_4)
+DEFINE_CUSTOMPATCH_STUB(hkbDemoConfig_1_to_2)
+DEFINE_CUSTOMPATCH_STUB(hkbGetUpModifier_1_to_2)
+DEFINE_CUSTOMPATCH_STUB(hkbStateMachine_2_to_3)
+DEFINE_CUSTOMPATCH_STUB(hkbSceneModifierList_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbBehaviorGraph_0_to_1)
+DEFINE_CUSTOMPATCH_STUB(hkbStateMachineStateInfo_3_to_4)
+DEFINE_CUSTOMPATCH_STUB(hkbLookAtModifier_2_to_3)
+
+// This automatically registers the patches from the HK_PATCHES_FILE
+// with the given hkVersionPatchmanager
+
+void HK_CALL CustomRegisterPatches(hkVersionPatchManager& man)
+{
+#	define HK_PATCHES_FILE <Common/Compat/Patches/hkbPatches.cxx>
+#	include <Common/Serialize/Version/hkVersionPatchManager.cxx>
+#	undef HK_PATCHES_FILE
+}
+
 
 #pragma endregion
 

@@ -506,6 +506,8 @@ public:
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
 
+
+
  void retranslateUi(QMainWindow *MainWindow)
     {
                MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Nifskope", 0, QApplication::UnicodeUTF8));
