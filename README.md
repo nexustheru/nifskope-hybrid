@@ -1,9 +1,15 @@
 nifskope-hybrid
 ===============
+Qt
+http://qt.digia.com/
 
 Havok
 http://www.havok.com/
 hkx,hkt format
+
+Figment 
+https://github.com/figment/hkxcmd
+the behavior files
 
 Niflib
 https://github.com/niftools
