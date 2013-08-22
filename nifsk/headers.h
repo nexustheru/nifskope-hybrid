@@ -91,6 +91,13 @@
 #include <Common/Base/Memory/System/Util/hkMemoryInitUtil.h>
 #include <Common/Base/Memory/Allocator/Malloc/hkMallocAllocator.h>
 #include <Common/Base/System/Io/IStream/hkIStream.h>
+
+#include <Common/Base/Reflection/Registry/hkDefaultClassNameRegistry.h>
+#include <Common/Serialize/Util/hkStaticClassNameRegistry.h>
+//vs
+#include <cstdio>
+// Scene
+#include <Common/SceneData/Scene/hkxScene.h>
 // Compatibility
 #include <Common/Compat/hkCompat.h>
 // Scene
@@ -101,27 +108,33 @@
 #include <Common/Serialize/Util/hkSerializeUtil.h>
 #include <Common/Serialize/Version/hkVersionPatchManager.h>
 #include <Common/Serialize/Data/hkDataObject.h>
-
+// Reflection
+#include <Common/Base/Reflection/hkClass.h>
+#include <Common/Base/Reflection/hkClassMember.h>
+#include <Common/Base/Reflection/hkInternalClassMember.h>
+#include <Common/Base/Reflection/hkClassMemberAccessor.h>
+// Animation
+#include <Animation/Animation/Rig/hkaSkeleton.h>
+#include <Animation/Animation/hkaAnimationContainer.h>
+#include <Animation/Animation/Mapper/hkaSkeletonMapper.h>
+#include <Animation/Animation/Playback/Control/Default/hkaDefaultAnimationControl.h>
+#include <Animation/Animation/Playback/hkaAnimatedSkeleton.h>
+#include <Animation/Animation/Animation/SplineCompressed/hkaSplineCompressedAnimation.h>
+#include <Animation/Animation/Rig/hkaPose.h>
+#include <Animation/Ragdoll/Controller/PoweredConstraint/hkaRagdollPoweredConstraintController.h>
+#include <Animation/Ragdoll/Controller/RigidBody/hkaRagdollRigidBodyController.h>
+#include <Animation/Ragdoll/Utils/hkaRagdollUtils.h>
 // Physics
 #include <Physics/Dynamics/Entity/hkpRigidBody.h>
 #include <Physics/Collide/Shape/Convex/Box/hkpBoxShape.h>
 #include <Physics/Utilities/Dynamics/Inertia/hkpInertiaTensorComputer.h>
 #include <Physics/Collide/Shape/Convex/Box/hkpBoxShape.h>
 #include <Physics/Dynamics/Entity/hkpRigidBody.h>
+#include <Common/Base/keycode.cxx>
 
-#define RETURN_FAIL_IF(COND, MSG) \
-	HK_MULTILINE_MACRO_BEGIN \
-		if(COND) { HK_ERROR(0x53a6a026, MSG); return 1; } \
-	HK_MULTILINE_MACRO_END
-
-static void HK_CALL errorReport(const char* msg, void* userContext)
-{
-	using namespace std;
-	printf("%s", msg);
-}
 
 // [id=keycode]
-#include <Common/Base/keycode.cxx>
+
 // [id=productfeatures]
 // We're using only physics - we undef products even if the keycode is present so
 // that we don't get the usual initialization for these products.
@@ -130,10 +143,10 @@ static void HK_CALL errorReport(const char* msg, void* userContext)
 //#undef HK_FEATURE_PRODUCT_ANIMATION
 #undef HK_FEATURE_PRODUCT_CLOTH
 #undef HK_FEATURE_PRODUCT_DESTRUCTION
-#undef HK_FEATURE_PRODUCT_BEHAVIOR
+//#undef HK_FEATURE_PRODUCT_BEHAVIOR
 //#undef HK_FEATURE_PRODUCT_PHYSICS
 #undef HK_FEATURE_PRODUCT_MILSIM
-#undef HK_FEATURE_PRODUCT_NEW_PHYSICS
+//#undef HK_FEATURE_PRODUCT_NEW_PHYSICS
 
 #include <Common/Base/Config/hkProductFeatures.cxx>
 

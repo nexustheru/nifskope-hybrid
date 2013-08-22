@@ -30,8 +30,7 @@ class Ui_MainWindow : public QMainWindow
 {
 	Q_OBJECT
 public:
-   QAction *actionLoad;
-    QAction *actionSave_as;
+    QAction *actionLoad;
     QAction *actionAutosanitze_before_save;
     QAction *actionNew_Window;
     QAction *actionReaload_xml_and_nif;
@@ -94,6 +93,7 @@ public:
     QAction *actionShow_blocks_in_list;
     QAction *actionHide_mismatched;
     QAction *actionReset_block_details_2;
+    QAction *actionSave_as_2;
     QWidget *centralwidget;
     QTableWidget *tableWidget;
     QGroupBox *groupBox;
@@ -117,6 +117,7 @@ public:
     QMenuBar *menubar;
     QMenu *menuFile;
     QMenu *menuImport;
+    QMenu *menuExport;
     QMenu *menuView;
     QMenu *menuBlock_list;
     QMenu *menuBlock_details;
@@ -129,20 +130,21 @@ public:
     QMenu *menuOptimize;
     QMenu *menuHelp;
     QStatusBar *statusbar;
+
 	char* thefilename;
 
 	//button events
 	public Q_SLOTS:
     void importscene(void);
-	void importhkx(void);
-	void saveas(void);
+	void exportscene(void);
+	
 	//
+	//functions
 
-static void build_hkxscene(const char* filename);
-
+   //
  void setupUi(QMainWindow *MainWindow)
     {
-        if (MainWindow->objectName().isEmpty())
+         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(989, 594);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
@@ -156,8 +158,6 @@ static void build_hkxscene(const char* filename);
         MainWindow->setWindowIcon(icon);
         actionLoad = new QAction(MainWindow);
         actionLoad->setObjectName(QString::fromUtf8("actionLoad"));
-        actionSave_as = new QAction(MainWindow);
-        actionSave_as->setObjectName(QString::fromUtf8("actionSave_as"));
         actionAutosanitze_before_save = new QAction(MainWindow);
         actionAutosanitze_before_save->setObjectName(QString::fromUtf8("actionAutosanitze_before_save"));
         actionNew_Window = new QAction(MainWindow);
@@ -282,6 +282,8 @@ static void build_hkxscene(const char* filename);
         actionHide_mismatched->setObjectName(QString::fromUtf8("actionHide_mismatched"));
         actionReset_block_details_2 = new QAction(MainWindow);
         actionReset_block_details_2->setObjectName(QString::fromUtf8("actionReset_block_details_2"));
+        actionSave_as_2 = new QAction(MainWindow);
+        actionSave_as_2->setObjectName(QString::fromUtf8("actionSave_as_2"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         tableWidget = new QTableWidget(centralwidget);
@@ -391,6 +393,8 @@ static void build_hkxscene(const char* filename);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         menuImport = new QMenu(menuFile);
         menuImport->setObjectName(QString::fromUtf8("menuImport"));
+        menuExport = new QMenu(menuFile);
+        menuExport->setObjectName(QString::fromUtf8("menuExport"));
         menuView = new QMenu(menubar);
         menuView->setObjectName(QString::fromUtf8("menuView"));
         menuBlock_list = new QMenu(menuView);
@@ -423,9 +427,8 @@ static void build_hkxscene(const char* filename);
         menubar->addAction(menuRender->menuAction());
         menubar->addAction(menuSpells->menuAction());
         menubar->addAction(menuHelp->menuAction());
-        menuFile->addAction(actionLoad);
         menuFile->addSeparator();
-        menuFile->addAction(actionSave_as);
+        menuFile->addAction(menuExport->menuAction());
         menuFile->addAction(menuImport->menuAction());
         menuFile->addAction(actionAutosanitze_before_save);
         menuFile->addAction(actionNew_Window);
@@ -434,7 +437,7 @@ static void build_hkxscene(const char* filename);
         menuFile->addAction(actionXml_checker);
         menuFile->addAction(actionResource_file);
         menuImport->addAction(actionImport_3ds);
-        menuImport->addAction(actionImport_obj);
+        menuExport->addAction(actionSave_as_2);
         menuView->addAction(actionReset_block_details);
         menuView->addAction(actionInteractive_view);
         menuView->addAction(actionBlock_list);
@@ -498,26 +501,24 @@ static void build_hkxscene(const char* filename);
 
         retranslateUi(MainWindow);
 		//the buttonslink//
-		QObject::connect(actionImport_obj, SIGNAL(triggered(bool)), this, SLOT(importscene()));
-		QObject::connect(actionImport_3ds, SIGNAL(triggered(bool)), this, SLOT(importhkx()));
-		QObject::connect(actionSave_as, SIGNAL(triggered(bool)), this, SLOT(saveas()));
+		QObject::connect(actionImport_3ds, SIGNAL(triggered(bool)), this, SLOT(importscene()));
+		QObject::connect(actionSave_as_2, SIGNAL(triggered(bool)), this, SLOT(exportscene()));
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
 
-    void retranslateUi(QMainWindow *MainWindow)
+ void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Nifskope", 0, QApplication::UnicodeUTF8));
+               MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Nifskope", 0, QApplication::UnicodeUTF8));
         actionLoad->setText(QApplication::translate("MainWindow", "Load", 0, QApplication::UnicodeUTF8));
-        actionSave_as->setText(QApplication::translate("MainWindow", "Save as", 0, QApplication::UnicodeUTF8));
         actionAutosanitze_before_save->setText(QApplication::translate("MainWindow", "Autosanitze before save", 0, QApplication::UnicodeUTF8));
         actionNew_Window->setText(QApplication::translate("MainWindow", "New Window", 0, QApplication::UnicodeUTF8));
         actionReaload_xml_and_nif->setText(QApplication::translate("MainWindow", "Reaload xml and nif", 0, QApplication::UnicodeUTF8));
         actionReload_xml->setText(QApplication::translate("MainWindow", "Reload xml", 0, QApplication::UnicodeUTF8));
         actionXml_checker->setText(QApplication::translate("MainWindow", "xml checker", 0, QApplication::UnicodeUTF8));
         actionResource_file->setText(QApplication::translate("MainWindow", "Resource file", 0, QApplication::UnicodeUTF8));
-        actionImport_3ds->setText(QApplication::translate("MainWindow", "import hkx", 0, QApplication::UnicodeUTF8));
-        actionImport_obj->setText(QApplication::translate("MainWindow", "import file", 0, QApplication::UnicodeUTF8));
-        actionExport_3ds->setText(QApplication::translate("MainWindow", "export file", 0, QApplication::UnicodeUTF8));
+        actionImport_3ds->setText(QApplication::translate("MainWindow", "Load file", 0, QApplication::UnicodeUTF8));
+        actionImport_obj->setText(QApplication::translate("MainWindow", "import obj", 0, QApplication::UnicodeUTF8));
+        actionExport_3ds->setText(QApplication::translate("MainWindow", "export 3ds", 0, QApplication::UnicodeUTF8));
         actionReset_block_details->setText(QApplication::translate("MainWindow", "Reset block details", 0, QApplication::UnicodeUTF8));
         actionInteractive_view->setText(QApplication::translate("MainWindow", "interactive help", 0, QApplication::UnicodeUTF8));
         actionBlock_list->setText(QApplication::translate("MainWindow", "block list", 0, QApplication::UnicodeUTF8));
@@ -571,6 +572,7 @@ static void build_hkxscene(const char* filename);
         actionShow_blocks_in_list->setText(QApplication::translate("MainWindow", "show blocks in list", 0, QApplication::UnicodeUTF8));
         actionHide_mismatched->setText(QApplication::translate("MainWindow", "hide version mismatched rows", 0, QApplication::UnicodeUTF8));
         actionReset_block_details_2->setText(QApplication::translate("MainWindow", "reset block details", 0, QApplication::UnicodeUTF8));
+        actionSave_as_2->setText(QApplication::translate("MainWindow", "Save as", 0, QApplication::UnicodeUTF8));
         groupBox->setTitle(QString());
         groupBox_2->setTitle(QString());
         pushButton_7->setText(QString());
@@ -586,6 +588,7 @@ static void build_hkxscene(const char* filename);
         pushButton_11->setText(QApplication::translate("MainWindow", "reset block details", 0, QApplication::UnicodeUTF8));
         menuFile->setTitle(QApplication::translate("MainWindow", "file", 0, QApplication::UnicodeUTF8));
         menuImport->setTitle(QApplication::translate("MainWindow", "Import", 0, QApplication::UnicodeUTF8));
+        menuExport->setTitle(QApplication::translate("MainWindow", "Export", 0, QApplication::UnicodeUTF8));
         menuView->setTitle(QApplication::translate("MainWindow", "View", 0, QApplication::UnicodeUTF8));
         menuBlock_list->setTitle(QApplication::translate("MainWindow", "block list", 0, QApplication::UnicodeUTF8));
         menuBlock_details->setTitle(QApplication::translate("MainWindow", "block details", 0, QApplication::UnicodeUTF8));

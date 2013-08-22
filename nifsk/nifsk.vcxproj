@@ -69,7 +69,7 @@
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
       <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\Users\esmeralda\Documents\Visual Studio 2010\Projects\niflib\lib;C:\Users\esmeralda\Documents\Visual Studio 2008\hk2010_2_0_r1\Lib\win32_vs2010_noSimd\release_dll;C:\Users\esmeralda\Desktop\Ny mapp\code\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
-      <AdditionalDependencies>qtmain.lib;QtCore4.lib;QtGui4.lib;QtXml4.lib;QtOpenGL4.lib;opengl32.lib;glu32.lib;QtNetwork4.lib;QtXmlPatterns4.lib;QtUiTools.lib;niflib.lib;hkBase.lib;hkCompat.lib;hkGeometryUtilities.lib;hkInternal.lib;hkSceneData.lib;hkSerialize.lib;hkpConstraintSolver.lib;hkpCollide.lib;hkpDynamics.lib;hkpInternal.lib;hkpUtilities.lib;hkaAnimation.lib;hkaInternal.lib;hkaRagdoll.lib;hkpConstraint.lib;hkcdCollide.lib;hkcdInternal.lib;hkpVehicle.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>qtmain.lib;QtCore4.lib;QtGui4.lib;QtXml4.lib;QtOpenGL4.lib;opengl32.lib;glu32.lib;QtNetwork4.lib;QtXmlPatterns4.lib;QtUiTools.lib;niflib.lib;hkBase.lib;hkCompat.lib;hkGeometryUtilities.lib;hkInternal.lib;hkSceneData.lib;hkSerialize.lib;hkpConstraintSolver.lib;hkpCollide.lib;hkpDynamics.lib;hkpInternal.lib;hkpUtilities.lib;hkaAnimation.lib;hkaInternal.lib;hkaRagdoll.lib;hkpConstraint.lib;hkcdCollide.lib;hkcdInternal.lib;hkgBridge.lib;hkpVehicle.lib;hctCommon.lib;hkVisualize.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

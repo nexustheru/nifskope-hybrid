@@ -1,36 +1,27 @@
-#include "nifskope.h"
+#include <nifskope.h>
 #include <headers.h>
 
 #define private public
 #define protected public
 
+#define RETURN_FAIL_IF(COND, MSG) \
+	HK_MULTILINE_MACRO_BEGIN \
+		if(COND) { HK_ERROR(0x53a6a026, MSG); return 1; } \
+	HK_MULTILINE_MACRO_END
+
 const struct aiScene* scene = NULL;
 
-void Ui_MainWindow::build_hkxscene(const char* filename)
+void appenditem(QString itemname)
 {
-	hkIstream stream(filename);
-	hkResource* resource = hkSerializeUtil::load(stream.getStreamReader());
-	hkBool32 failed = true;
-	if (resource->getAllocatedSize() >0 )
-	{
-     hkpRigidBody* root=resource->getContents<hkpRigidBody>();
-	 QMessageBox msgBox;
-	 msgBox.setText("ok");
-	 msgBox.exec();
-	}
-	else
-	{
-		 QMessageBox msgBox;
-	 msgBox.setText("no");
-	 msgBox.exec();
-	}
+	
+
 }
 
 void getcases(QString etc)
 {
 	if(etc.contains(".hkx")==true)
 	{
-		Ui_MainWindow::build_hkxscene(etc.toStdString().c_str());
+		
 	}
 	else if(etc.contains(".nif")==true)
 	{
@@ -40,76 +31,36 @@ void getcases(QString etc)
 	{
 
 	}
-	else if(etc.contains(".obj")==true)
-	{
-
-	}
-	else if(etc.contains(".3ds")==true)
-	{
-
-	}
-	else if(etc.contains(".DAE")==true)
-	{
-
-	}
-	else if(etc.contains(".fbx")==true)
-	{
-
-	}
-	else if(etc.contains(".ase")==true)
-	{
-
-	}
-	else if(etc.contains(".blend")==true)
-	{
-
-	}
-	else if(etc.contains(".x")==true)
-	{
-
-	}
-	else if(etc.contains(".xml")==true)
-	{
-
-	}
-	else if(etc.contains(".mdl")==true)
-	{
-
-	}
+	
 	else
 	{
+      scene = aiImportFile((etc.toStdString().c_str()),aiProcessPreset_TargetRealtime_MaxQuality);
 
 	}
 }
 
-void Ui_MainWindow::saveas(void)
-{
-	QString fileName = QFileDialog::getSaveFileName(this,
-	QObject::tr("Import Hkx File"), "/home/jana", QObject::tr("File formats (*.hkx *.nif *.kfm *.3DS *.BLEND *.DAE *.FBX *.IFC-STEP *.ASE *.DXF *.HMP *.MD2 *.MD3 *.MD5 *.MDC *.MDL *.NFF *.PLY *.STL *.X *.OBJ *.SMD *.LWO *.LXO *.LWS *.TER *.AC3D *.MS3D *.COB *.Q3BSP *.XGL *.CSM *.BVH *.B3D *.NDO *.Ogre *.XML *.Q3D)"));
-	QMessageBox msgBox;
-	std::string test="file has been saved as " + fileName.toStdString();
-	msgBox.setText(QString::fromStdString((test)));
-	msgBox.exec();
-	
-}
-
-void Ui_MainWindow::importhkx(void)
-{
-	QString fileName = QFileDialog::getOpenFileName(this,
-	QObject::tr("Import Hkx File"), "/home/jana", QObject::tr("File formats (*.hkx)"));
-	getcases(fileName);
-	const char* fname=fileName.toStdString().c_str();
-	Ui_MainWindow::lineEdit->setText(fileName.toStdString().c_str());
-}
-
- void Ui_MainWindow::importscene(void)
+void Ui_MainWindow::importscene(void)
 {
 	
 	QString fileName = QFileDialog::getOpenFileName(this,
-	QObject::tr("Import File"), "/home/jana", QObject::tr("File formats (*.3DS *.BLEND *.DAE *.FBX *.IFC-STEP *.ASE *.DXF *.HMP *.MD2 *.MD3 *.MD5 *.MDC *.MDL *.NFF *.PLY *.STL *.X *.OBJ *.SMD *.LWO *.LXO *.LWS *.TER *.AC3D *.MS3D *.COB *.Q3BSP *.XGL *.CSM *.BVH *.B3D *.NDO *.Ogre *.XML *.Q3D)"));
-	scene = aiImportFile((fileName.toStdString().c_str()),aiProcessPreset_TargetRealtime_MaxQuality);
-	Ui_MainWindow::lineEdit->setText(fileName.toStdString().c_str());
+	QObject::tr("Import File"), " ", QObject::tr("File formats (*.nif *.kfm *.hkx *.hkt *.3DS *.BLEND *.DAE *.FBX *.IFC-STEP *.ASE *.DXF *.HMP *.MD2 *.MD3 *.MD5 *.MDC *.MDL *.NFF *.PLY *.STL *.X *.OBJ *.SMD *.LWO *.LXO *.LWS *.TER *.AC3D *.MS3D *.COB *.Q3BSP *.XGL *.CSM *.BVH *.B3D *.NDO *.Ogre *.XML *.Q3D)"));
+	
+	
 }
+
+void Ui_MainWindow::exportscene(void)
+{
+
+}
+
+static void HK_CALL errorReport(const char* msg, void* userContext)
+{
+	using namespace std;
+	 QMessageBox msgBox;
+	 msgBox.setText(QString::fromUtf8(msg));
+	 msgBox.exec();
+}
+
 
 int HK_CALL main( int argc,char* argv[])
 {
