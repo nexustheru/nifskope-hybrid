@@ -62,7 +62,9 @@ hkroot=new hkRootLevelContainer();
 	if(etc.contains(".hkx",Qt::CaseSensitive)==true)
 	{
 		hkOstream stream(etc.toStdString().c_str());
-		hkResult res = hkSerializeUtil::save( hkroot, stream.getStreamWriter() );
+		hkPackfileWriter::Options options;
+        hkSerializeUtil::savePackfile( hkroot, hkRootLevelContainerClass, hkOstream(stream).getStreamWriter(), options );
+		//hkResult res = hkSerializeUtil::save(hkroot, stream.getStreamWriter(),hkSerializeUtil::SAVE_WRITE_ATTRIBUTES);
 	}
 	else if(etc.contains(".nif",Qt::CaseSensitive)==true)
 	{
@@ -106,18 +108,30 @@ void getcasesin(QString etc)
 {
 try
 {
-	
+	hkSerializeUtil::ErrorDetails* ers;
 	if(etc.contains(".hkx")==true)
 	{
+		
+		try
+		{
+		hkSerializeUtil::LoadOptions loptions;
 		hkIstream stream(etc.toStdString().c_str());
-        hkResource* resource = hkSerializeUtil::load(stream.getStreamReader());
+        hkResource* resource = hkSerializeUtil::load(stream.getStreamReader(),ers);
 		hkroot=new hkRootLevelContainer();
 		hkroot = resource->getContents<hkRootLevelContainer>();
+		}
+	    catch (std::exception* err)
+		{
+			QMessageBox* mes;
+
+	        mes->setText(err->what());
+	        mes->exec();
+		}
 	}
 	if(etc.contains(".xml")==true)
 	{
 		hkIstream stream(etc.toStdString().c_str());
-        hkResource* resource = hkSerializeUtil::load(stream.getStreamReader());
+        hkResource* resource = hkSerializeUtil::load(stream.getStreamReader(),ers);
 		hkroot=new hkRootLevelContainer();
 		hkroot = resource->getContents<hkRootLevelContainer>();
 	}
@@ -155,8 +169,8 @@ try
 catch(std::exception* ers)
 {
 	QMessageBox* mes;
-			mes->setText(ers->what());
-			mes->exec();
+	mes->setText(ers->what());
+	mes->exec();
 }
 }
 

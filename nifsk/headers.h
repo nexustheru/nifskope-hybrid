@@ -156,6 +156,15 @@ static void HK_CALL errorReport(const char* msg, void* userContext)
 #undef HK_FEATURE_PRODUCT_CLOTH
 #undef HK_FEATURE_PRODUCT_DESTRUCTION
 #undef HK_FEATURE_PRODUCT_BEHAVIOR
+#define HK_FEATURE_PRODUCT_ANIMATION
+#define HK_FEATURE_PRODUCT_PHYSICS
+#define HK_FEATURE_REFLECTION_PHYSICS
+#define HK_FEATURE_REFLECTION_ANIMATION
+#define SerializeDeprecatedPre700
+#define RegisterVersionPatches
+#define MemoryTracker
+#define HK_HAVOK_VERSION_201020r1
+
 
 #define HK_CLASSES_FILE "hkxreg.h"
 //#include <Common/Serialize/Util/hkBuiltinTypeRegistry.cxx>
