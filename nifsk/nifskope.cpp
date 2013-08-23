@@ -11,10 +11,18 @@
 		if(COND) { HK_ERROR(0x53a6a026, MSG); return 1; } \
 	HK_MULTILINE_MACRO_END
 
-const struct aiScene* scene = NULL;
-const struct aiMesh* mesh = NULL;
+//globals/////////////////////////////////////////////////////////////////////////////////////////////////
+const aiScene* scene;
+const aiMesh* mesh;
+const aiNode *in;
+///
+Niflib::NiNodeRef niparentnode;
+Niflib::NiObjectRef niparentobject;
+Niflib::NiAVObjectRef niparentav;
+///
+hkRootLevelContainer* hkroot;
 hkbBehaviorGraph* newgraph;
-
+//globals/////////////////////////////////////////////////////////////////////////////////////////////////
 void appenditem(QString itemname)
 {
 	
@@ -50,8 +58,8 @@ newgraph=new hkbBehaviorGraph();
 	
 	else
 	{
-      aiExportScene(scene,"collada",etc.toStdString().c_str(),aiProcessPreset_TargetRealtime_MaxQuality);
-	  
+      aiExportScene(scene,"dae","meu",0);
+	
 	}
 }
 
