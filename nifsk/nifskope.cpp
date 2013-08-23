@@ -52,11 +52,16 @@ void view_behavior(void)
 
 void getcasesout(QString etc)
 {
-newgraph=new hkbBehaviorGraph();
+hkroot=new hkRootLevelContainer();
+	if(etc.contains(".xml",Qt::CaseSensitive)==true)
+	{
+		hkOstream stream(etc.toStdString().c_str());
+		hkResult res = hkSerializeUtil::saveTagfile( hkroot, hkRootLevelContainerClass, stream.getStreamWriter(), HK_NULL, hkSerializeUtil::SAVE_TEXT_FORMAT);
+	}
 	if(etc.contains(".hkx",Qt::CaseSensitive)==true)
 	{
-		hkOstream stream("rigidBody_xml_tagfile.xml");
-		hkResult res = hkSerializeUtil::saveTagfile( newgraph, hkbBehaviorGraphClass, stream.getStreamWriter(), HK_NULL, hkSerializeUtil::SAVE_TEXT_FORMAT);
+		hkOstream stream(etc.toStdString().c_str());
+		hkResult res = hkSerializeUtil::save( hkroot, stream.getStreamWriter() );
 	}
 	else if(etc.contains(".nif",Qt::CaseSensitive)==true)
 	{
@@ -74,7 +79,7 @@ newgraph=new hkbBehaviorGraph();
 	
 	else if(etc.contains(".dae",Qt::CaseSensitive)==true)
 	{
-		const aiScene* scene1;
+	  const aiScene* scene1;
       aiExportScene(scene1,"dae","hihh",0);
 	}
 	else if(etc.contains(".obj",Qt::CaseSensitive)==true)
@@ -139,7 +144,7 @@ void Ui::Ui_MainWindow::importscene(void)
 void Ui::Ui_MainWindow::exportscene(void)
 {
 	QString fileName = QFileDialog::getSaveFileName(this,
-	QObject::tr("Export File"),"",QObject::tr("File formats (*.nif *.kfm *.hkx *.hkt *.3DS *.DAE *.FBX *.ASE *.MDL *.X *.OBJ *.SMD *.BVH *.Ogre *.XML )"));
+	QObject::tr("Export File")," ",QObject::tr("File formats (*.nif *.kfm *.hkx *.hkt *.3DS *.DAE *.FBX *.ASE *.MDL *.X *.OBJ *.SMD *.BVH *.Ogre *.XML )"));
 	getcasesout(fileName);
 }
 
