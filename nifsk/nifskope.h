@@ -1,5 +1,7 @@
 #include <assimp\mesh.h>
 #include <Common\GeometryUtilities\hkGeometryUtilities.h>
+#include <niflib.h>
+#include <obj\NiTriShape.h>
 
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
@@ -142,8 +144,9 @@ public:
 	public Q_SLOTS:
     void importscene(void);
 	void exportscene(void);
-	void placemesh(const struct aiMesh* mesh);
+	void placemesh(const aiMesh* mesh);
 	void placemesh(hkMeshBody* hmesh);
+	void placemesh(Niflib::NiTriShapeRef nimesh);
 	//
 	//functions
 

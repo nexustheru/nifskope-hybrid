@@ -8,9 +8,5 @@
 #include <algorithm>
 #include <cmath>
 #include <map>
-#include <string.h>
+#include <string>
 
-#define WIN32_LEAN_AND_MEAN
-#include "windows.h"
-
-#include "shlwapi.h"

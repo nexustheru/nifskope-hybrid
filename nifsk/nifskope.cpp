@@ -1,10 +1,11 @@
 #include <nifskope.h>
 #include <headers.h>
 #include <hkbBehaviorGraph_1.h>
-
-
 #define private public
 #define protected public
+using namespace Niflib;
+using namespace std;
+using namespace Assimp;
 
 #define RETURN_FAIL_IF(COND, MSG) \
 	HK_MULTILINE_MACRO_BEGIN \
@@ -16,9 +17,10 @@ const aiScene* scene;
 const aiMesh* mesh;
 const aiNode *in;
 ///
-Niflib::NiNodeRef niparentnode;
-Niflib::NiObjectRef niparentobject;
-Niflib::NiAVObjectRef niparentav;
+NifInfo nifInfo(VER_20_2_0_7, 12, 83);
+NiNodeRef niparentnode;
+NiObjectRef niparentobject;
+NiAVObjectRef niparentav;
 ///
 hkRootLevelContainer* hkroot;
 hkbBehaviorGraph* newgraph;
@@ -29,7 +31,7 @@ void appenditem(QString itemname)
 
 }
 
-void Ui::Ui_MainWindow::placemesh(const struct aiMesh* mesh)
+void Ui::Ui_MainWindow::placemesh(const aiMesh* mesh)
 {
 	
 	
@@ -38,18 +40,33 @@ void Ui::Ui_MainWindow::placemesh(hkMeshBody* hmesh)
 {
 
 }
+void Ui::Ui_MainWindow::placemesh(NiTriShapeRef nimesh)
+{
+
+}
+
+void view_behavior(void)
+{
+
+}
+
 void getcasesout(QString etc)
 {
 newgraph=new hkbBehaviorGraph();
+try
+  {
 	if(etc.contains(".hkx")==true)
 	{
 		
-		hkOstream stream("rigidBody_xml_tagfile.xml");
-		hkResult res = hkSerializeUtil::saveTagfile( newgraph, hkbBehaviorGraphClass, stream.getStreamWriter(), HK_NULL, hkSerializeUtil::SAVE_TEXT_FORMAT);
+		//hkOstream stream("rigidBody_xml_tagfile.xml");
+		//hkResult res = hkSerializeUtil::saveTagfile( newgraph, hkbBehaviorGraphClass, stream.getStreamWriter(), HK_NULL, hkSerializeUtil::SAVE_TEXT_FORMAT);
 	}
 	else if(etc.contains(".nif")==true)
 	{
-
+		niparentnode=new NiNode();
+		niparentnode->SetName("root");
+        WriteNifTree(etc.toStdString(),niparentnode,nifInfo);
+		
 	}
 	else if(etc.contains(".kfm")==true)
 	{
@@ -58,9 +75,18 @@ newgraph=new hkbBehaviorGraph();
 	
 	else
 	{
-      aiExportScene(scene,"dae","meu",0);
+	
+      aiExportScene(scene,"dae",etc.toStdString().c_str(),aiProcessPreset_TargetRealtime_MaxQuality);
 	
 	}
+}
+catch(std::exception* ert)
+{
+			QMessageBox* mes;
+			mes->setText(ert->what());
+			mes->exec();
+}
+		
 }
 
 void getcasesin(QString etc)
@@ -94,15 +120,10 @@ void Ui::Ui_MainWindow::importscene(void)
 	getcasesin(fileName);
 }
 
-void view_behavior(void)
-{
-
-}
-
 void Ui::Ui_MainWindow::exportscene(void)
 {
-	QString fileName = QFileDialog::getSaveFileName(this,
-	QObject::tr("Export File"), " ", QObject::tr("File formats (*.nif *.kfm *.hkx *.hkt *.3DS *.BLEND *.DAE *.FBX *.IFC-STEP *.ASE *.DXF *.HMP *.MD2 *.MD3 *.MD5 *.MDC *.MDL *.NFF *.PLY *.STL *.X *.OBJ *.SMD *.LWO *.LXO *.LWS *.TER *.AC3D *.MS3D *.COB *.Q3BSP *.XGL *.CSM *.BVH *.B3D *.NDO *.Ogre *.XML *.Q3D)"));
+	QString fileName = QFileDialog::getSaveFileName(0,
+	QObject::tr("Export File"),QDir::currentPath(),QObject::tr("File formats (*.nif *.kfm *.hkx *.hkt *.3DS *.BLEND *.DAE *.FBX *.IFC-STEP *.ASE *.DXF *.HMP *.MD2 *.MD3 *.MD5 *.MDC *.MDL *.NFF *.PLY *.STL *.X *.OBJ *.SMD *.LWO *.LXO *.LWS *.TER *.AC3D *.MS3D *.COB *.Q3BSP *.XGL *.CSM *.BVH *.B3D *.NDO *.Ogre *.XML *.Q3D)"));
 	getcasesout(fileName);
 }
 

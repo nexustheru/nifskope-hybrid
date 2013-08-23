@@ -1,6 +1,7 @@
 #define private public
 #define protected public
 
+#include <mat.h>
 //assimp
 #include <assimp\Importer.hpp>
 #include <assimp\Exporter.hpp>
@@ -82,6 +83,8 @@
 #include <obj\NiFloatInterpolator.h>
 #include <obj\NiFloatsExtraData.h>
 #include <obj\NiObjectNET.h>
+#include <nif_basic_types.h>
+
 //havok
 #pragma region Havok Headers
 //////////////////////////////////////////////////////////////////////////
