@@ -123,7 +123,15 @@ try
 	}
 	else if(etc.contains(".nif")==true)
 	{
-
+niparentobject=new NiObject();
+		niparentobject=ReadNifTree(etc.toStdString(),nifInfo);
+		niparentnode=new ninode();
+        niparentnode=DynamicCast<NiNode>(niparentobject);
+		if(niparentnode==NULL)
+		{
+			niparentfadenode=new NiBSFadeNode();
+			niparentfadenode=DynamicCast<NiNode>(NiBSFadeNode);
+		}
 	}
 	else if(etc.contains(".kfm")==true)
 	{
