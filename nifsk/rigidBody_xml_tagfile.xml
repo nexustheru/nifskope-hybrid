@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ascii"?>
+<hktagfile version="1">
+  <class name="hkBaseObject" version="0">
+  </class>
+  <class name="hkReferencedObject" version="0" parent="hkBaseObject">
+    <member name="memSizeAndFlags" type="void"/>
+    <member name="referenceCount" type="void"/>
+  </class>
+  <class name="hkbBindable" version="0" parent="hkReferencedObject">
+    <member name="variableBindingSet" type="ref" class="hkbVariableBindingSet"/>
+    <member name="cachedBindables" type="void"/>
+    <member name="areBindablesCached" type="void"/>
+  </class>
+  <class name="hkbVariableBindingSet" version="2" parent="hkReferencedObject">
+    <member name="bindings" type="struct" array="true" class="hkbVariableBindingSetBinding"/>
+    <member name="indexOfBindingToEnable" type="int"/>
+    <member name="hasOutputBinding" type="void"/>
+  </class>
+  <class name="hkbVariableBindingSetBinding" version="1">
+    <member name="memberPath" type="string"/>
+    <member name="memberClass" type="void"/>
+    <member name="offsetInObjectPlusOne" type="void"/>
+    <member name="offsetInArrayPlusOne" type="void"/>
+    <member name="rootVariableIndex" type="void"/>
+    <member name="variableIndex" type="int"/>
+    <member name="bitIndex" type="int"/>
+    <member name="bindingType" type="int"/>
+    <member name="memberType" type="void"/>
+    <member name="variableType" type="void"/>
+    <member name="flags" type="void"/>
+  </class>
+  <class name="hkbNode" version="1" parent="hkbBindable">
+    <member name="userData" type="int"/>
+    <member name="name" type="string"/>
+    <member name="id" type="void"/>
+    <member name="cloneState" type="void"/>
+    <member name="padNode" type="void"/>
+  </class>
+  <class name="hkbGenerator" version="0" parent="hkbNode">
+  </class>
+  <class name="hkbBehaviorGraph" version="1" parent="hkbGenerator">
+    <member name="variableMode" type="int"/>
+    <member name="uniqueIdPool" type="void"/>
+    <member name="idToStateMachineTemplateMap" type="void"/>
+    <member name="mirroredExternalIdMap" type="void"/>
+    <member name="pseudoRandomGenerator" type="void"/>
+    <member name="rootGenerator" type="ref" class="hkbGenerator"/>
+    <member name="data" type="ref" class="hkbBehaviorGraphData"/>
+    <member name="rootGeneratorClone" type="void"/>
+    <member name="activeNodes" type="void"/>
+    <member name="activeNodeTemplateToIndexMap" type="void"/>
+    <member name="activeNodesChildrenIndices" type="void"/>
+    <member name="globalTransitionData" type="void"/>
+    <member name="eventIdMap" type="void"/>
+    <member name="attributeIdMap" type="void"/>
+    <member name="variableIdMap" type="void"/>
+    <member name="characterPropertyIdMap" type="void"/>
+    <member name="variableValueSet" type="void"/>
+    <member name="nodeTemplateToCloneMap" type="void"/>
+    <member name="nodeCloneToTemplateMap" type="void"/>
+    <member name="stateListenerTemplateToCloneMap" type="void"/>
+    <member name="nodePartitionInfo" type="void"/>
+    <member name="numIntermediateOutputs" type="void"/>
+    <member name="jobs" type="void"/>
+    <member name="allPartitionMemory" type="void"/>
+    <member name="numStaticNodes" type="void"/>
+    <member name="nextUniqueId" type="void"/>
+    <member name="isActive" type="void"/>
+    <member name="isLinked" type="void"/>
+    <member name="updateActiveNodes" type="void"/>
+    <member name="stateOrTransitionChanged" type="void"/>
+  </class>
+  <class name="hkbBehaviorGraphData" version="2" parent="hkReferencedObject">
+    <member name="attributeDefaults" type="real" array="true"/>
+    <member name="variableInfos" type="struct" array="true" class="hkbVariableInfo"/>
+    <member name="characterPropertyInfos" type="struct" array="true" class="hkbVariableInfo"/>
+    <member name="eventInfos" type="struct" array="true" class="hkbEventInfo"/>
+    <member name="wordMinVariableValues" type="struct" array="true" class="hkbVariableValue"/>
+    <member name="wordMaxVariableValues" type="struct" array="true" class="hkbVariableValue"/>
+    <member name="variableInitialValues" type="ref" class="hkbVariableValueSet"/>
+    <member name="stringData" type="ref" class="hkbBehaviorGraphStringData"/>
+  </class>
+  <class name="hkbVariableInfo" version="1">
+    <member name="role" type="struct" class="hkbRoleAttribute"/>
+    <member name="type" type="int"/>
+  </class>
+  <class name="hkbRoleAttribute" version="0">
+    <member name="role" type="int"/>
+    <member name="flags" type="int"/>
+  </class>
+  <class name="hkbEventInfo" version="0">
+    <member name="flags" type="int"/>
+  </class>
+  <class name="hkbVariableValue" version="0">
+    <member name="value" type="int"/>
+  </class>
+  <class name="hkbVariableValueSet" version="0" parent="hkReferencedObject">
+    <member name="wordVariableValues" type="struct" array="true" class="hkbVariableValue"/>
+    <member name="quadVariableValues" type="vec4" array="true"/>
+    <member name="variantVariableValues" type="ref" array="true" class="hkReferencedObject"/>
+  </class>
+  <class name="hkbBehaviorGraphStringData" version="1" parent="hkReferencedObject">
+    <member name="eventNames" type="string" array="true"/>
+    <member name="attributeNames" type="string" array="true"/>
+    <member name="variableNames" type="string" array="true"/>
+    <member name="characterPropertyNames" type="string" array="true"/>
+  </class>
+
+  <object id="#0001" type="hkbBehaviorGraph">
+    <int name="userData">6563956</int>
+    <int name="variableMode">-52</int>
+  </object>
+</hktagfile>
