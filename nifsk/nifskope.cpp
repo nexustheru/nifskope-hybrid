@@ -19,6 +19,7 @@ const aiNode *in;
 ///
 NifInfo nifInfo(VER_20_2_0_7, 12, 83);
 NiNodeRef niparentnode;
+BSFadeNodeRef niparentfadenode;
 NiObjectRef niparentobject;
 NiAVObjectRef niparentav;
 ///
@@ -108,7 +109,17 @@ try
 	
 	if(etc.contains(".hkx")==true)
 	{
-		
+		hkIstream stream(etc.toStdString().c_str());
+        hkResource* resource = hkSerializeUtil::load(stream.getStreamReader());
+		hkroot=new hkRootLevelContainer();
+		hkroot = resource->getContents<hkRootLevelContainer>();
+	}
+	if(etc.contains(".xml")==true)
+	{
+		hkIstream stream(etc.toStdString().c_str());
+        hkResource* resource = hkSerializeUtil::load(stream.getStreamReader());
+		hkroot=new hkRootLevelContainer();
+		hkroot = resource->getContents<hkRootLevelContainer>();
 	}
 	else if(etc.contains(".nif")==true)
 	{
@@ -116,7 +127,15 @@ try
 	}
 	else if(etc.contains(".kfm")==true)
 	{
-
+		niparentobject=new NiObject();
+		niparentobject=ReadNifTree(etc.toStdString(),nifInfo);
+		niparentnode=new ninode();
+        niparentnode=DynamicCast<NiNode>(niparentobject);
+		if(niparentnode==NULL)
+		{
+			niparentfadenode=new NiBSFadeNode();
+			niparentfadenode=DynamicCast<NiNode>(NiBSFadeNode);
+		}
 	}
 	
 	else
