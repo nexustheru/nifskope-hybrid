@@ -91,7 +91,9 @@ catch(std::exception* ert)
 
 void getcasesin(QString etc)
 {
-
+try
+{
+	
 	if(etc.contains(".hkx")==true)
 	{
 		
@@ -110,6 +112,13 @@ void getcasesin(QString etc)
       scene = aiImportFile((etc.toStdString().c_str()),aiProcessPreset_TargetRealtime_MaxQuality);
 	  
 	}
+}
+catch(std::exception* ers)
+{
+	QMessageBox* mes;
+			mes->setText(ers->what());
+			mes->exec();
+}
 }
 
 void Ui::Ui_MainWindow::importscene(void)
