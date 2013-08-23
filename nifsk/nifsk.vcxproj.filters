@@ -1471,5 +1471,62 @@
   <ItemGroup>
     <None Include="..\README.md" />
     <None Include="compat\hkxverify.inl" />
+    <None Include="Resources\nifskope.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\button_view_flip.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\button_view_front.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\button_view_pers.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\button_view_side.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\button_view_top.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\button_view_user.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\button_view_walk.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\havok_logo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\img_flag.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\img_link.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\img_update.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\qhull_cone.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\arrow_left.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\arrow_right.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\button_loop.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\button_play.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\button_switch.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Fbx.ico">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -1,5 +1,14 @@
-#include <assimp\mesh.h>
-#include <Common\GeometryUtilities\hkGeometryUtilities.h>
+/********************************************************************************
+** Form generated from reading UI file 'nifskope.ui'
+**
+** Created: Fri Aug 23 12:25:39 2013
+**      by: Qt User Interface Compiler version 4.8.4
+**
+** WARNING! All changes made in this file will be lost when recompiling UI file!
+********************************************************************************/
+
+#ifndef UI_NIFSKOPE_H
+#define UI_NIFSKOPE_H
 
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
@@ -19,21 +28,11 @@
 #include <QtGui/QTableWidget>
 #include <QtGui/QTreeView>
 #include <QtGui/QWidget>
-#include <QTGui/qfiledialog.h>
-#include <QtGui/qdesktopservices.h>
-#include <qdesktopservices.h>
-#include <QtGui/qdesktopwidget.h>
-#include <QtGui\qmessagebox.h>
-
 
 QT_BEGIN_NAMESPACE
-	
 
-namespace Ui 
+class Ui_MainWindow
 {
-class Ui_MainWindow : public QMainWindow
-{
-	Q_OBJECT
 public:
     QAction *actionLoad;
     QAction *actionAutosanitze_before_save;
@@ -136,21 +135,9 @@ public:
     QMenu *menuHelp;
     QStatusBar *statusbar;
 
-	char* thefilename;
-
-	//button events
-	public Q_SLOTS:
-    void importscene(void);
-	void exportscene(void);
-	void placemesh(const struct aiMesh* mesh);
-	void placemesh(hkMeshBody* hmesh);
-	//
-	//functions
-
-   //
- void setupUi(QMainWindow *MainWindow)
+    void setupUi(QMainWindow *MainWindow)
     {
-         if (MainWindow->objectName().isEmpty())
+        if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(989, 594);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
@@ -159,8 +146,8 @@ public:
         sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
         MainWindow->setSizePolicy(sizePolicy);
         QIcon icon;
-        icon.addFile(QString::fromUtf8("Resources/nifskope.png"), QSize(), QIcon::Normal, QIcon::Off);
-        icon.addFile(QString::fromStdString("Resources/nifskope.png"), QSize(), QIcon::Normal, QIcon::On);
+        icon.addFile(QString::fromUtf8(":/res/nifskope.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8(":/res/nifskope.png"), QSize(), QIcon::Normal, QIcon::On);
         MainWindow->setWindowIcon(icon);
         actionLoad = new QAction(MainWindow);
         actionLoad->setObjectName(QString::fromUtf8("actionLoad"));
@@ -320,51 +307,51 @@ public:
         pushButton_7->setObjectName(QString::fromUtf8("pushButton_7"));
         pushButton_7->setGeometry(QRect(280, 10, 41, 21));
         QIcon icon1;
-        icon1.addFile(QString::fromUtf8("Resources/play.png"), QSize(), QIcon::Normal, QIcon::Off);
-        icon1.addFile(QString::fromUtf8("Resources/play.png"), QSize(), QIcon::Normal, QIcon::On);
+        icon1.addFile(QString::fromUtf8(":/btn/play"), QSize(), QIcon::Normal, QIcon::Off);
+        icon1.addFile(QString::fromUtf8(":/btn/play"), QSize(), QIcon::Normal, QIcon::On);
         pushButton_7->setIcon(icon1);
         pushButton_6 = new QPushButton(groupBox_2);
         pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
         pushButton_6->setGeometry(QRect(160, 10, 41, 21));
         QIcon icon2;
-        icon2.addFile(QString::fromUtf8("Resources/view_walk.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon2.addFile(QString::fromUtf8(":/btn/viewWalk"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_6->setIcon(icon2);
         pushButton_2 = new QPushButton(groupBox_2);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
         pushButton_2->setGeometry(QRect(40, 10, 41, 21));
         QIcon icon3;
-        icon3.addFile(QString::fromUtf8("Resources/view_front.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon3.addFile(QString::fromUtf8(":/btn/viewFront"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_2->setIcon(icon3);
         pushButton_8 = new QPushButton(groupBox_2);
         pushButton_8->setObjectName(QString::fromUtf8("pushButton_8"));
         pushButton_8->setGeometry(QRect(240, 10, 41, 21));
         QIcon icon4;
-        icon4.addFile(QString::fromUtf8("Resources/view_pers.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon4.addFile(QString::fromUtf8(":/btn/viewPers"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_8->setIcon(icon4);
         pushButton_5 = new QPushButton(groupBox_2);
         pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
         pushButton_5->setGeometry(QRect(200, 10, 41, 21));
         QIcon icon5;
-        icon5.addFile(QString::fromUtf8("Resources/view_flip.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon5.addFile(QString::fromUtf8(":/btn/viewFlip"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_5->setIcon(icon5);
         pushButton_3 = new QPushButton(groupBox_2);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
         pushButton_3->setGeometry(QRect(120, 10, 41, 21));
         QIcon icon6;
-        icon6.addFile(QString::fromUtf8("Resources/view_user.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon6.addFile(QString::fromUtf8(":/btn/viewUser"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_3->setIcon(icon6);
         pushButton_4 = new QPushButton(groupBox_2);
         pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
         pushButton_4->setGeometry(QRect(80, 10, 41, 21));
         QIcon icon7;
-        icon7.addFile(QString::fromUtf8("Resources/view_side.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon7.addFile(QString::fromUtf8(":/btn/viewSide"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_4->setIcon(icon7);
         pushButton = new QPushButton(groupBox_2);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(0, 10, 41, 21));
         QIcon icon8;
-        icon8.addFile(QString::fromUtf8("Resources/view_top.png"), QSize(), QIcon::Normal, QIcon::Off);
-        icon8.addFile(QString::fromUtf8("Resources/view_top.png"), QSize(), QIcon::Normal, QIcon::On);
+        icon8.addFile(QString::fromUtf8(":/btn/viewTop"), QSize(), QIcon::Normal, QIcon::Off);
+        icon8.addFile(QString::fromUtf8(":/btn/viewTop"), QSize(), QIcon::Normal, QIcon::On);
         pushButton->setIcon(icon8);
         pushButton->setAutoDefault(false);
         pushButton->setDefault(false);
@@ -377,13 +364,13 @@ public:
         pushButton_9->setObjectName(QString::fromUtf8("pushButton_9"));
         pushButton_9->setGeometry(QRect(370, 10, 41, 21));
         QIcon icon9;
-        icon9.addFile(QString::fromUtf8("Resources/loop.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon9.addFile(QString::fromUtf8(":/btn/loop"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_9->setIcon(icon9);
         pushButton_10 = new QPushButton(groupBox_2);
         pushButton_10->setObjectName(QString::fromUtf8("pushButton_10"));
         pushButton_10->setGeometry(QRect(410, 10, 41, 21));
         QIcon icon10;
-        icon10.addFile(QString::fromUtf8("Resources/switch.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon10.addFile(QString::fromUtf8(":/btn/switch"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_10->setIcon(icon10);
         pushButton_11 = new QPushButton(groupBox_2);
         pushButton_11->setObjectName(QString::fromUtf8("pushButton_11"));
@@ -506,14 +493,13 @@ public:
         menuHelp->addAction(actionAbout_nifskope);
 
         retranslateUi(MainWindow);
-		//the buttonslink//
-		QObject::connect(actionImport_3ds, SIGNAL(triggered(bool)), this, SLOT(importscene()));
-		QObject::connect(actionSave_as_2, SIGNAL(triggered(bool)), this, SLOT(exportscene()));
+
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
- void retranslateUi(QMainWindow *MainWindow)
+
+    void retranslateUi(QMainWindow *MainWindow)
     {
-               MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Nifskope", 0, QApplication::UnicodeUTF8));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Nifskope", 0, QApplication::UnicodeUTF8));
         actionLoad->setText(QApplication::translate("MainWindow", "Load", 0, QApplication::UnicodeUTF8));
         actionAutosanitze_before_save->setText(QApplication::translate("MainWindow", "Autosanitze before save", 0, QApplication::UnicodeUTF8));
         actionNew_Window->setText(QApplication::translate("MainWindow", "New Window", 0, QApplication::UnicodeUTF8));
@@ -606,8 +592,13 @@ public:
         menuOptimize->setTitle(QApplication::translate("MainWindow", "optimize", 0, QApplication::UnicodeUTF8));
         menuHelp->setTitle(QApplication::translate("MainWindow", "Help", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
- 
+
 };
 
-
+namespace Ui {
+    class MainWindow: public Ui_MainWindow {};
 } // namespace Ui
+
+QT_END_NAMESPACE
+
+#endif // UI_NIFSKOPE_H

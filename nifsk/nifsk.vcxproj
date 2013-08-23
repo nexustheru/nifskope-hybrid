@@ -585,6 +585,25 @@
   <ItemGroup>
     <None Include="..\README.md" />
     <None Include="compat\hkxverify.inl" />
+    <None Include="Resources\arrow_left.png" />
+    <None Include="Resources\arrow_right.png" />
+    <None Include="Resources\button_loop.png" />
+    <None Include="Resources\button_play.png" />
+    <None Include="Resources\button_switch.png" />
+    <None Include="Resources\button_view_flip.png" />
+    <None Include="Resources\button_view_front.png" />
+    <None Include="Resources\button_view_pers.png" />
+    <None Include="Resources\button_view_side.png" />
+    <None Include="Resources\button_view_top.png" />
+    <None Include="Resources\button_view_user.png" />
+    <None Include="Resources\button_view_walk.png" />
+    <None Include="Resources\Fbx.ico" />
+    <None Include="Resources\havok_logo.png" />
+    <None Include="Resources\img_flag.png" />
+    <None Include="Resources\img_link.png" />
+    <None Include="Resources\img_update.png" />
+    <None Include="Resources\nifskope.png" />
+    <None Include="Resources\qhull_cone.gif" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
