@@ -1,7 +1,6 @@
 #define private public
 #define protected public
 
-
 //assimp
 #include <assimp\Importer.hpp>
 #include <assimp\Exporter.hpp>
@@ -135,6 +134,7 @@
 #include <Physics/Collide/Shape/Convex/Box/hkpBoxShape.h>
 #include <Physics/Dynamics/Entity/hkpRigidBody.h>
 
+
 static void HK_CALL errorReport(const char* msg, void* userContext)
 {
 	using namespace std;
@@ -152,10 +152,7 @@ static void HK_CALL errorReport(const char* msg, void* userContext)
 //#undef HK_FEATURE_PRODUCT_ANIMATION
 #undef HK_FEATURE_PRODUCT_CLOTH
 #undef HK_FEATURE_PRODUCT_DESTRUCTION
-//#undef HK_FEATURE_PRODUCT_BEHAVIOR
-//#undef HK_FEATURE_PRODUCT_PHYSICS
-#undef HK_FEATURE_PRODUCT_MILSIM
-//#undef HK_FEATURE_PRODUCT_NEW_PHYSICS
+#undef HK_FEATURE_PRODUCT_BEHAVIOR
 
 #define HK_CLASSES_FILE "hkxreg.h"
 //#include <Common/Serialize/Util/hkBuiltinTypeRegistry.cxx>
@@ -200,16 +197,82 @@ DEFINE_CUSTOMPATCH_STUB(hkbSceneModifierList_0_to_1)
 DEFINE_CUSTOMPATCH_STUB(hkbBehaviorGraph_0_to_1)
 DEFINE_CUSTOMPATCH_STUB(hkbStateMachineStateInfo_3_to_4)
 DEFINE_CUSTOMPATCH_STUB(hkbLookAtModifier_2_to_3)
+void HK_CALL registerBehaviorPatches()
+{
+}
 
 // This automatically registers the patches from the HK_PATCHES_FILE
 // with the given hkVersionPatchmanager
-
 void HK_CALL CustomRegisterPatches(hkVersionPatchManager& man)
 {
 #	define HK_PATCHES_FILE <Common/Compat/Patches/hkbPatches.cxx>
 #	include <Common/Serialize/Version/hkVersionPatchManager.cxx>
 #	undef HK_PATCHES_FILE
 }
+
+#define ASSERT_SIGNATURE(XXX, YYY) \
+   if (XXX##Class.getSignature(0) != YYY) { Log::Warn("Class Signature Mismatch: '" #XXX "' %08lx != %08lx", XXX##Class.getSignature(0), YYY); }\
+
+#define REGISTER_CLASS(XXX) \
+   extern const hkClass XXX##Class; \
+   extern const hkTypeInfo XXX##TypeInfo; \
+   hkDefaultClassNameRegistry::getInstance().registerClass(&XXX##Class); \
+   hkTypeInfoRegistry::getInstance().registerTypeInfo(&XXX##TypeInfo); \
+
+#define REGISTER_CLASS_W_SIG(XXX, YYY) \
+   REGISTER_CLASS(##XXX); \
+   Log::Debug("Class Registered: '" #XXX "' %08lx", XXX##Class.getSignature(0)); \
+   ASSERT_SIGNATURE(##XXX, ##YYY); \
+
+
+
+void HK_CALL ValidateClassSignatures()
+{
+#define HKCLASS_VERIFY(XXX, YYY) \
+   extern const hkClass XXX##Class; \
+   if (XXX##Class.getSignature(0) != YYY) { Log::Warn("Class Signature Mismatch: '" #XXX "' %08lx != %08lx", XXX##Class.getSignature(0), YYY); }\
+
+#include "hkxverify.inl"
+#undef HKCLASS_VERIFY
+}
+
+void HK_CALL CustomRegisterDefaultClasses()
+{
+#define HKCLASS_VERIFY(XXX, YYY) REGISTER_CLASS_W_SIG(##XXX, ##YYY)
+#include "hkxverify.inl"
+#undef HKCLASS_VERIFY
+}
+
+namespace hkHavok660r1Classes
+{
+   extern const hkStaticClassNameRegistry hkHavokDefaultClassRegistry;
+}
+
+void HK_CALL CustomRegisterOverrideClasses(hkDynamicClassNameRegistry& registry)
+{
+   const hkStaticClassNameRegistry** regList = hkVersionRegistry::StaticLinkedClassRegistries;
+   for ( const hkStaticClassNameRegistry** itr = regList; *itr != NULL; ++itr)
+   {
+      const hkStaticClassNameRegistry* oldRegistry = (*itr);
+      if (const hkClass* hclass = oldRegistry->getClassByName("hkClassEnum") )
+      {
+         //if ( hclass->getSignature() == 0x9617a10c )
+         if ( hclass->getSignature() == 0x9EE66732 )
+         {
+            registry.registerClass(hclass);
+            return;
+         }
+      }
+   }
+
+   //const hkStaticClassNameRegistry& oldRegistry = hkHavok660r1Classes::hkHavokDefaultClassRegistry;
+
+   //REGISTER_CLASS_W_SIG(, ##YYY)
+}
+
+
+#pragma endregion
+
 
 
 #pragma endregion

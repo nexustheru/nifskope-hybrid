@@ -1,3 +1,5 @@
+#include <assimp\mesh.h>
+#include <Common\GeometryUtilities\hkGeometryUtilities.h>
 
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
@@ -25,7 +27,10 @@
 
 
 QT_BEGIN_NAMESPACE
+	
 
+namespace Ui 
+{
 class Ui_MainWindow : public QMainWindow
 {
 	Q_OBJECT
@@ -137,7 +142,8 @@ public:
 	public Q_SLOTS:
     void importscene(void);
 	void exportscene(void);
-	
+	void placemesh(const struct aiMesh* mesh);
+	void placemesh(hkMeshBody* hmesh);
 	//
 	//functions
 
@@ -505,9 +511,6 @@ public:
 		QObject::connect(actionSave_as_2, SIGNAL(triggered(bool)), this, SLOT(exportscene()));
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
-
-
-
  void retranslateUi(QMainWindow *MainWindow)
     {
                MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Nifskope", 0, QApplication::UnicodeUTF8));
@@ -603,11 +606,8 @@ public:
         menuOptimize->setTitle(QApplication::translate("MainWindow", "optimize", 0, QApplication::UnicodeUTF8));
         menuHelp->setTitle(QApplication::translate("MainWindow", "Help", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
-
+ 
 };
 
-namespace Ui {
-    class MainWindow: public Ui_MainWindow {};
-} // namespace Ui
 
-QT_END_NAMESPACE
+} // namespace Ui

@@ -1470,5 +1470,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />
+    <None Include="compat\hkxverify.inl" />
   </ItemGroup>
 </Project>
