@@ -160,9 +160,6 @@ static void HK_CALL errorReport(const char* msg, void* userContext)
 #define HK_FEATURE_PRODUCT_PHYSICS
 #define HK_FEATURE_REFLECTION_PHYSICS
 #define HK_FEATURE_REFLECTION_ANIMATION
-#define SerializeDeprecatedPre700
-#define RegisterVersionPatches
-#define MemoryTracker
 #define HK_HAVOK_VERSION_201020r1
 
 
