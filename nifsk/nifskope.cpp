@@ -30,8 +30,7 @@ void Ui::Ui_MainWindow::placemesh(hkMeshBody* hmesh)
 {
 
 }
-
-void getcases(QString etc)
+void getcasesout(QString etc)
 {
 newgraph=new hkbBehaviorGraph();
 	if(etc.contains(".hkx")==true)
@@ -39,6 +38,29 @@ newgraph=new hkbBehaviorGraph();
 		
 		hkOstream stream("rigidBody_xml_tagfile.xml");
 		hkResult res = hkSerializeUtil::saveTagfile( newgraph, hkbBehaviorGraphClass, stream.getStreamWriter(), HK_NULL, hkSerializeUtil::SAVE_TEXT_FORMAT);
+	}
+	else if(etc.contains(".nif")==true)
+	{
+
+	}
+	else if(etc.contains(".kfm")==true)
+	{
+
+	}
+	
+	else
+	{
+      aiExportScene(scene,"collada",etc.toStdString().c_str(),aiProcessPreset_TargetRealtime_MaxQuality);
+	  
+	}
+}
+
+void getcasesin(QString etc)
+{
+
+	if(etc.contains(".hkx")==true)
+	{
+		
 	}
 	else if(etc.contains(".nif")==true)
 	{
@@ -61,7 +83,7 @@ void Ui::Ui_MainWindow::importscene(void)
 	
 	QString fileName = QFileDialog::getOpenFileName(this,
 	QObject::tr("Import File"), " ", QObject::tr("File formats (*.nif *.kfm *.hkx *.hkt *.3DS *.BLEND *.DAE *.FBX *.IFC-STEP *.ASE *.DXF *.HMP *.MD2 *.MD3 *.MD5 *.MDC *.MDL *.NFF *.PLY *.STL *.X *.OBJ *.SMD *.LWO *.LXO *.LWS *.TER *.AC3D *.MS3D *.COB *.Q3BSP *.XGL *.CSM *.BVH *.B3D *.NDO *.Ogre *.XML *.Q3D)"));
-	getcases(fileName);
+	getcasesin(fileName);
 }
 
 void view_behavior(void)
@@ -73,7 +95,7 @@ void Ui::Ui_MainWindow::exportscene(void)
 {
 	QString fileName = QFileDialog::getSaveFileName(this,
 	QObject::tr("Export File"), " ", QObject::tr("File formats (*.nif *.kfm *.hkx *.hkt *.3DS *.BLEND *.DAE *.FBX *.IFC-STEP *.ASE *.DXF *.HMP *.MD2 *.MD3 *.MD5 *.MDC *.MDL *.NFF *.PLY *.STL *.X *.OBJ *.SMD *.LWO *.LXO *.LWS *.TER *.AC3D *.MS3D *.COB *.Q3BSP *.XGL *.CSM *.BVH *.B3D *.NDO *.Ogre *.XML *.Q3D)"));
-	getcases(fileName);
+	getcasesout(fileName);
 }
 
 int HK_CALL main( int argc,char* argv[])
