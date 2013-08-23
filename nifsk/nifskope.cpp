@@ -123,26 +123,26 @@ try
 	}
 	else if(etc.contains(".nif")==true)
 	{
-niparentobject=new NiObject();
-		niparentobject=ReadNifTree(etc.toStdString(),nifInfo);
-		niparentnode=new ninode();
+        niparentobject=new NiObject();
+		niparentobject=ReadNifTree(etc.toStdString());
+		niparentnode=new NiNode();
         niparentnode=DynamicCast<NiNode>(niparentobject);
 		if(niparentnode==NULL)
 		{
-			niparentfadenode=new NiBSFadeNode();
-			niparentfadenode=DynamicCast<NiNode>(NiBSFadeNode);
+			niparentfadenode=new BSFadeNode();
+			niparentfadenode=DynamicCast<BSFadeNode>(niparentobject);
 		}
 	}
 	else if(etc.contains(".kfm")==true)
 	{
 		niparentobject=new NiObject();
-		niparentobject=ReadNifTree(etc.toStdString(),nifInfo);
-		niparentnode=new ninode();
+		niparentobject=ReadNifTree(etc.toStdString());
+		niparentnode=new NiNode();
         niparentnode=DynamicCast<NiNode>(niparentobject);
 		if(niparentnode==NULL)
 		{
-			niparentfadenode=new NiBSFadeNode();
-			niparentfadenode=DynamicCast<NiNode>(NiBSFadeNode);
+			niparentfadenode=new BSFadeNode();
+			niparentfadenode=DynamicCast<BSFadeNode>(niparentobject);
 		}
 	}
 	
