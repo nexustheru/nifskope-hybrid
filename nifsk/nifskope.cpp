@@ -53,40 +53,47 @@ void view_behavior(void)
 void getcasesout(QString etc)
 {
 newgraph=new hkbBehaviorGraph();
-try
-  {
-	if(etc.contains(".hkx")==true)
+	if(etc.contains(".hkx",Qt::CaseSensitive)==true)
 	{
-		
-		//hkOstream stream("rigidBody_xml_tagfile.xml");
-		//hkResult res = hkSerializeUtil::saveTagfile( newgraph, hkbBehaviorGraphClass, stream.getStreamWriter(), HK_NULL, hkSerializeUtil::SAVE_TEXT_FORMAT);
+		hkOstream stream("rigidBody_xml_tagfile.xml");
+		hkResult res = hkSerializeUtil::saveTagfile( newgraph, hkbBehaviorGraphClass, stream.getStreamWriter(), HK_NULL, hkSerializeUtil::SAVE_TEXT_FORMAT);
 	}
-	else if(etc.contains(".nif")==true)
+	else if(etc.contains(".nif",Qt::CaseSensitive)==true)
 	{
 		niparentnode=new NiNode();
 		niparentnode->SetName("root");
         WriteNifTree(etc.toStdString(),niparentnode,nifInfo);
 		
 	}
-	else if(etc.contains(".kfm")==true)
+	else if(etc.contains(".kfm",Qt::CaseSensitive)==true)
 	{
-
+		niparentnode=new NiNode();
+		niparentnode->SetName("root");
+        WriteNifTree(etc.toStdString(),niparentnode,nifInfo);
+	}
+	
+	else if(etc.contains(".dae",Qt::CaseSensitive)==true)
+	{
+		const aiScene* scene1;
+      aiExportScene(scene1,"dae","hihh",0);
+	}
+	else if(etc.contains(".obj",Qt::CaseSensitive)==true)
+	{
+      const aiScene* scene1;
+      aiExportScene(scene1,"obj","hihh",0);
+	}
+	else if(etc.contains(".fbx",Qt::CaseSensitive)==true)
+	{
+      //
 	}
 	
 	else
 	{
-	
-      aiExportScene(scene,"dae",etc.toStdString().c_str(),aiProcessPreset_TargetRealtime_MaxQuality);
-	
-	}
-}
-catch(std::exception* ert)
-{
-			QMessageBox* mes;
-			mes->setText(ert->what());
+	  
+	        QMessageBox* mes;
+			mes->setText("format isnt available for export");
 			mes->exec();
-}
-		
+	}
 }
 
 void getcasesin(QString etc)
@@ -131,8 +138,8 @@ void Ui::Ui_MainWindow::importscene(void)
 
 void Ui::Ui_MainWindow::exportscene(void)
 {
-	QString fileName = QFileDialog::getSaveFileName(0,
-	QObject::tr("Export File"),QDir::currentPath(),QObject::tr("File formats (*.nif *.kfm *.hkx *.hkt *.3DS *.BLEND *.DAE *.FBX *.IFC-STEP *.ASE *.DXF *.HMP *.MD2 *.MD3 *.MD5 *.MDC *.MDL *.NFF *.PLY *.STL *.X *.OBJ *.SMD *.LWO *.LXO *.LWS *.TER *.AC3D *.MS3D *.COB *.Q3BSP *.XGL *.CSM *.BVH *.B3D *.NDO *.Ogre *.XML *.Q3D)"));
+	QString fileName = QFileDialog::getSaveFileName(this,
+	QObject::tr("Export File"),"",QObject::tr("File formats (*.nif *.kfm *.hkx *.hkt *.3DS *.DAE *.FBX *.ASE *.MDL *.X *.OBJ *.SMD *.BVH *.Ogre *.XML )"));
 	getcasesout(fileName);
 }
 
