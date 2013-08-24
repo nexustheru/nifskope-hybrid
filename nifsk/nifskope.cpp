@@ -26,12 +26,26 @@ NiAVObjectRef niparentav;
 hkRootLevelContainer* hkroot;
 hkbBehaviorGraph* newgraph;
 //globals/////////////////////////////////////////////////////////////////////////////////////////////////
-void appenditem(QString itemname)
+void InitializeSdkObjects(FbxManager*& pManager, FbxScene*& pScene)
 {
-	
 
 }
+void DestroySdkObjects(FbxManager* pManager, bool pExitStatus)
+{
 
+}
+void CreateAndFillIOSettings(FbxManager* pManager)
+{
+
+}
+bool SaveScene(FbxManager* pManager, FbxDocument* pScene, const char* pFilename, int pFileFormat=-1, bool pEmbedMedia=false)
+{
+	return true;
+}
+bool LoadScene(FbxManager* pManager, FbxDocument* pScene, const char* pFilename)
+{
+	return true;
+}
 void Ui::Ui_MainWindow::placemesh(const aiMesh* mesh)
 {
 	
@@ -45,15 +59,8 @@ void Ui::Ui_MainWindow::placemesh(NiTriShapeRef nimesh)
 {
 
 }
-
-void view_behavior(void)
-{
-
-}
-
 void getcasesout(QString etc)
 {
-hkbBehaviorGraph* gr=new hkbBehaviorGraph();
 hkroot=new hkRootLevelContainer();
 	if(etc.contains(".xml",Qt::CaseSensitive)==true)
 	{
@@ -62,9 +69,9 @@ hkroot=new hkRootLevelContainer();
 	}
 	if(etc.contains(".hkx",Qt::CaseSensitive)==true)
 	{
+        hkPackfileWriter::Options options;
 		hkOstream stream(etc.toStdString().c_str());
-		hkPackfileWriter::Options options;
-        hkSerializeUtil::savePackfile( gr, hkbBehaviorGraphClass, hkOstream(stream).getStreamWriter(), options );
+        hkSerializeUtil::savePackfile( hkroot, hkRootLevelContainerClass, hkOstream(stream).getStreamWriter(), options );
 		//hkResult res = hkSerializeUtil::save(hkroot, stream.getStreamWriter(),hkSerializeUtil::SAVE_WRITE_ATTRIBUTES);
 	}
 	else if(etc.contains(".nif",Qt::CaseSensitive)==true)
@@ -80,7 +87,6 @@ hkroot=new hkRootLevelContainer();
 		niparentnode->SetName("root");
         WriteNifTree(etc.toStdString(),niparentnode,nifInfo);
 	}
-	
 	else if(etc.contains(".dae",Qt::CaseSensitive)==true)
 	{
 	  const aiScene* scene1;
@@ -104,7 +110,6 @@ hkroot=new hkRootLevelContainer();
 			mes->exec();
 	}
 }
-
 void getcasesin(QString etc)
 {
 	hkSerializeUtil::ErrorDetails* ers;
@@ -154,7 +159,6 @@ void getcasesin(QString etc)
 	  
 	}
 }
-
 void Ui::Ui_MainWindow::importscene(void)
 {
 	
@@ -162,14 +166,12 @@ void Ui::Ui_MainWindow::importscene(void)
 	QObject::tr("Import File"), " ", QObject::tr("File formats (*.nif *.kfm *.hkx *.hkt *.3DS *.BLEND *.DAE *.FBX *.IFC-STEP *.ASE *.DXF *.HMP *.MD2 *.MD3 *.MD5 *.MDC *.MDL *.NFF *.PLY *.STL *.X *.OBJ *.SMD *.LWO *.LXO *.LWS *.TER *.AC3D *.MS3D *.COB *.Q3BSP *.XGL *.CSM *.BVH *.B3D *.NDO *.Ogre *.XML *.Q3D)"));
 	getcasesin(fileName);
 }
-
 void Ui::Ui_MainWindow::exportscene(void)
 {
 	QString fileName = QFileDialog::getSaveFileName(this,
 	QObject::tr("Export File")," ",QObject::tr("File formats (*.nif *.kfm *.hkx *.hkt *.3DS *.DAE *.FBX *.ASE *.MDL *.X *.OBJ *.SMD *.BVH *.Ogre *.XML )"));
 	getcasesout(fileName);
 }
-
 int HK_CALL main( int argc,char* argv[])
 {
 	hkMallocAllocator baseMalloc;
