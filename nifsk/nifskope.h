@@ -1,4 +1,5 @@
 #include <assimp\mesh.h>
+#include <fbxsdk.h>
 #include <Common\GeometryUtilities\hkGeometryUtilities.h>
 #include <niflib.h>
 #include <obj\NiTriShape.h>
@@ -146,6 +147,7 @@ public:
 	void exportscene(void);
 	void placemesh(const aiMesh* mesh);
 	void placemesh(hkMeshBody* hmesh);
+	void placemesh(FbxMesh* fmesh);
 	void placemesh(Niflib::NiTriShapeRef nimesh);
 	//
 	//functions

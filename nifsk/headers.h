@@ -93,7 +93,7 @@
 //////////////////////////////////////////////////////////////////////////
 //fbx
 #include <fbxsdk.h>
-#define fbxsdk_2014_1
+
 
 static void HK_CALL errorReport(const char* msg, void* userContext)
 {

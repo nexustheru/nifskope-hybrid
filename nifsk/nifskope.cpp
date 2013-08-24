@@ -6,6 +6,7 @@
 using namespace Niflib;
 using namespace std;
 using namespace Assimp;
+using namespace fbxsdk_2014_1;
 
 #define RETURN_FAIL_IF(COND, MSG) \
 	HK_MULTILINE_MACRO_BEGIN \
@@ -25,26 +26,84 @@ NiAVObjectRef niparentav;
 ///
 hkRootLevelContainer* hkroot;
 hkbBehaviorGraph* newgraph;
+FbxManager* manager;
+FbxMesh* fmesh;
+FbxNode* fnode;
 //globals/////////////////////////////////////////////////////////////////////////////////////////////////
-void InitializeSdkObjects(FbxManager*& pManager, FbxScene*& pScene)
+
+void fbximport(QString fileName)
+{
+manager = FbxManager::Create();
+FbxIOSettings *ioSettings = FbxIOSettings::Create(manager, IOSROOT);
+ioSettings->SetBoolProp(EXP_FBX_MATERIAL,        true);
+ioSettings->SetBoolProp(EXP_FBX_TEXTURE,         true);
+ioSettings->SetBoolProp(EXP_FBX_EMBEDDED,        true);
+ioSettings->SetBoolProp(EXP_FBX_SHAPE,           true);
+ioSettings->SetBoolProp(EXP_FBX_GOBO,            true);
+ioSettings->SetBoolProp(EXP_FBX_ANIMATION,       true);
+ioSettings->SetBoolProp(EXP_FBX_GLOBAL_SETTINGS, true);
+manager->SetIOSettings(ioSettings);
+FbxImporter *importer=FbxImporter::Create(manager,"");
+const bool result= importer->Initialize(fileName.toStdString().c_str(),-1,manager->GetIOSettings());
+if(!result)
+     {
+       QMessageBox::information(0,"error",importer->GetStatus().GetErrorString());
+     }
+     else
+     {
+       FbxScene *scene = FbxScene::Create(manager,"tempName");
+       importer->Import(scene);
+       importer->Destroy();
+       FbxNode* rootNode=scene->GetRootNode();
+       QMessageBox::information(0,"fbx","import fbx ok!"); 
+       FbxMesh* mesh = NULL;
+	   FbxGeometryConverter convert(manager);
+	   for (int childi = 0; childi < rootNode->GetChildCount(true); ++ childi)
+	   {
+		
+		if(mesh=rootNode->GetChild(childi)->GetMesh())
+		{
+			QMessageBox::information(0,"fbx","MESH FOUND!");
+			break;
+		}
+
+		if(mesh->IsTriangleMesh()==false)
+		{
+            QMessageBox::information(0,"optimizing","TRIANGLUALTING MESH!");
+			convert.TriangulateInPlace(scene->GetRootNode()->GetChild(0));
+			break;
+		}
+		mesh=rootNode->GetChild(childi)->GetMesh();
+	  }
+    }
+}
+void fbxexport(QString fileName)
 {
 
 }
-void DestroySdkObjects(FbxManager* pManager, bool pExitStatus)
+void havokimport(void)
 {
 
 }
-void CreateAndFillIOSettings(FbxManager* pManager)
+void havokexport(void)
 {
 
 }
-bool SaveScene(FbxManager* pManager, FbxDocument* pScene, const char* pFilename, int pFileFormat=-1, bool pEmbedMedia=false)
+void nifimport(void)
 {
-	return true;
+
 }
-bool LoadScene(FbxManager* pManager, FbxDocument* pScene, const char* pFilename)
+void nifexport(void)
 {
-	return true;
+
+}
+void asimpimport(void)
+{
+
+}
+void asimpexport(void)
+{
+
 }
 void Ui::Ui_MainWindow::placemesh(const aiMesh* mesh)
 {
@@ -54,6 +113,9 @@ void Ui::Ui_MainWindow::placemesh(const aiMesh* mesh)
 void Ui::Ui_MainWindow::placemesh(hkMeshBody* hmesh)
 {
 
+}
+void Ui::Ui_MainWindow::placemesh(FbxMesh* fmesh)
+{
 }
 void Ui::Ui_MainWindow::placemesh(NiTriShapeRef nimesh)
 {
@@ -121,13 +183,7 @@ void getcasesin(QString etc)
 		hkroot = resource->getContents<hkRootLevelContainer>();
 		
 	}
-	else if(etc.contains(".xml")==true)
-	{
-		hkIstream stream(etc.toStdString().c_str());
-        hkResource* resource = hkSerializeUtil::load(stream.getStreamReader());
-		hkroot=new hkRootLevelContainer();
-		hkroot = resource->getContents<hkRootLevelContainer>();
-	}
+	
 	else if(etc.contains(".nif")==true)
 	{
         niparentobject=new NiObject();
@@ -151,6 +207,10 @@ void getcasesin(QString etc)
 			niparentfadenode=new BSFadeNode();
 			niparentfadenode=DynamicCast<BSFadeNode>(niparentobject);
 		}
+	}
+	else if(etc.contains(".fbx")==true)
+	{
+		fbximport(etc);
 	}
 	
 	else
