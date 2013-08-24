@@ -91,57 +91,14 @@
 // Havok Includes
 //////////////////////////////////////////////////////////////////////////
 
-#include <Common/Base/hkBase.h>
-#include <Common/Base/Memory/System/Util/hkMemoryInitUtil.h>
-#include <Common/Base/Memory/Allocator/Malloc/hkMallocAllocator.h>
-#include <Common/Base/System/Io/IStream/hkIStream.h>
-
-#include <Common/Base/Reflection/Registry/hkDefaultClassNameRegistry.h>
-#include <Common/Serialize/Util/hkStaticClassNameRegistry.h>
-//vs
-#include <cstdio>
-// Scene
-#include <Common/SceneData/Scene/hkxScene.h>
-// Compatibility
-#include <Common/Compat/hkCompat.h>
-// Scene
-#include <Common/SceneData/Scene/hkxScene.h>
-// Serialize
-#include <Common/Serialize/Util/hkRootLevelContainer.h>
-#include <Common/Serialize/Util/hkLoader.h>
-#include <Common/Serialize/Util/hkSerializeUtil.h>
-#include <Common/Serialize/Version/hkVersionPatchManager.h>
-#include <Common/Serialize/Data/hkDataObject.h>
-//#include <Common/Serialize/Util/hkBuiltinTypeRegistry.h>
-
-// Reflection
-#include <Common/Base/Reflection/hkClass.h>
-#include <Common/Base/Reflection/hkClassMember.h>
-#include <Common/Base/Reflection/hkInternalClassMember.h>
-#include <Common/Base/Reflection/hkClassMemberAccessor.h>
-// Animation
-#include <Animation/Animation/Rig/hkaSkeleton.h>
-#include <Animation/Animation/hkaAnimationContainer.h>
-#include <Animation/Animation/Mapper/hkaSkeletonMapper.h>
-#include <Animation/Animation/Playback/Control/Default/hkaDefaultAnimationControl.h>
-#include <Animation/Animation/Playback/hkaAnimatedSkeleton.h>
-#include <Animation/Animation/Animation/SplineCompressed/hkaSplineCompressedAnimation.h>
-#include <Animation/Animation/Rig/hkaPose.h>
-#include <Animation/Ragdoll/Controller/PoweredConstraint/hkaRagdollPoweredConstraintController.h>
-#include <Animation/Ragdoll/Controller/RigidBody/hkaRagdollRigidBodyController.h>
-#include <Animation/Ragdoll/Utils/hkaRagdollUtils.h>
-// Physics
-#include <Physics/Dynamics/Entity/hkpRigidBody.h>
-#include <Physics/Collide/Shape/Convex/Box/hkpBoxShape.h>
-#include <Physics/Utilities/Dynamics/Inertia/hkpInertiaTensorComputer.h>
-#include <Physics/Collide/Shape/Convex/Box/hkpBoxShape.h>
-#include <Physics/Dynamics/Entity/hkpRigidBody.h>
+#include <mat.h>	
 
 
 static void HK_CALL errorReport(const char* msg, void* userContext)
 {
 	using namespace std;
-	 printf("%",msg);
+
+	 printf("%s", msg);
 }
 
 #include <Common/Base/keycode.cxx>
@@ -152,15 +109,12 @@ static void HK_CALL errorReport(const char* msg, void* userContext)
 // that we don't get the usual initialization for these products.
 
 #undef HK_FEATURE_PRODUCT_AI
-//#undef HK_FEATURE_PRODUCT_ANIMATION
 #undef HK_FEATURE_PRODUCT_CLOTH
 #undef HK_FEATURE_PRODUCT_DESTRUCTION
-#undef HK_FEATURE_PRODUCT_BEHAVIOR
-#define HK_FEATURE_PRODUCT_ANIMATION
 #define HK_FEATURE_PRODUCT_PHYSICS
 #define HK_FEATURE_REFLECTION_PHYSICS
+#define HK_FEATURE_PRODUCT_ANIMATION
 #define HK_FEATURE_REFLECTION_ANIMATION
-#define HK_HAVOK_VERSION_201020r1
 
 
 #define HK_CLASSES_FILE "hkxreg.h"
@@ -285,4 +239,3 @@ void HK_CALL CustomRegisterOverrideClasses(hkDynamicClassNameRegistry& registry)
 
 
 #pragma endregion
-

@@ -344,6 +344,7 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="behaviorincludes.h" />
     <ClInclude Include="compat\BGSGamebryoSequenceGenerator_2.h" />
     <ClInclude Include="compat\BSBoneSwitchGeneratorBoneData_1.h" />
     <ClInclude Include="compat\BSBoneSwitchGenerator_1.h" />

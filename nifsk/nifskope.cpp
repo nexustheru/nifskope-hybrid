@@ -53,17 +53,18 @@ void view_behavior(void)
 
 void getcasesout(QString etc)
 {
+hkbBehaviorGraph* gr=new hkbBehaviorGraph();
 hkroot=new hkRootLevelContainer();
 	if(etc.contains(".xml",Qt::CaseSensitive)==true)
 	{
 		hkOstream stream(etc.toStdString().c_str());
-		hkResult res = hkSerializeUtil::saveTagfile( hkroot, hkRootLevelContainerClass, stream.getStreamWriter(), HK_NULL, hkSerializeUtil::SAVE_TEXT_FORMAT);
+		hkSerializeUtil::saveTagfile( hkroot, hkRootLevelContainerClass, stream.getStreamWriter(), HK_NULL, hkSerializeUtil::SAVE_TEXT_FORMAT);
 	}
 	if(etc.contains(".hkx",Qt::CaseSensitive)==true)
 	{
 		hkOstream stream(etc.toStdString().c_str());
 		hkPackfileWriter::Options options;
-        hkSerializeUtil::savePackfile( hkroot, hkRootLevelContainerClass, hkOstream(stream).getStreamWriter(), options );
+        hkSerializeUtil::savePackfile( gr, hkbBehaviorGraphClass, hkOstream(stream).getStreamWriter(), options );
 		//hkResult res = hkSerializeUtil::save(hkroot, stream.getStreamWriter(),hkSerializeUtil::SAVE_WRITE_ATTRIBUTES);
 	}
 	else if(etc.contains(".nif",Qt::CaseSensitive)==true)
@@ -106,32 +107,19 @@ hkroot=new hkRootLevelContainer();
 
 void getcasesin(QString etc)
 {
-try
-{
 	hkSerializeUtil::ErrorDetails* ers;
 	if(etc.contains(".hkx")==true)
 	{
-		
-		try
-		{
-		hkSerializeUtil::LoadOptions loptions;
 		hkIstream stream(etc.toStdString().c_str());
-        hkResource* resource = hkSerializeUtil::load(stream.getStreamReader(),ers);
+        hkResource* resource = hkSerializeUtil::load(stream.getStreamReader());
 		hkroot=new hkRootLevelContainer();
 		hkroot = resource->getContents<hkRootLevelContainer>();
-		}
-	    catch (std::exception* err)
-		{
-			QMessageBox* mes;
-
-	        mes->setText(err->what());
-	        mes->exec();
-		}
+		
 	}
-	if(etc.contains(".xml")==true)
+	else if(etc.contains(".xml")==true)
 	{
 		hkIstream stream(etc.toStdString().c_str());
-        hkResource* resource = hkSerializeUtil::load(stream.getStreamReader(),ers);
+        hkResource* resource = hkSerializeUtil::load(stream.getStreamReader());
 		hkroot=new hkRootLevelContainer();
 		hkroot = resource->getContents<hkRootLevelContainer>();
 	}
@@ -166,13 +154,6 @@ try
 	  
 	}
 }
-catch(std::exception* ers)
-{
-	QMessageBox* mes;
-	mes->setText(ers->what());
-	mes->exec();
-}
-}
 
 void Ui::Ui_MainWindow::importscene(void)
 {
@@ -201,4 +182,3 @@ int HK_CALL main( int argc,char* argv[])
 	widget->show();
 	return app.exec();
 }
-
