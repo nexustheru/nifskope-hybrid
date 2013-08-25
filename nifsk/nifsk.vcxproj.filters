@@ -743,6 +743,15 @@
     <ClCompile Include="compat\hkbWorldFromModelModeData_0.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Openglwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Openglwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Openglwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="nifskope.h">
@@ -750,6 +759,9 @@
     </CustomBuild>
     <CustomBuild Include="nifskope.ui">
       <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Openglwindow.h">
+      <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

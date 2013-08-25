@@ -121,6 +121,7 @@ void Ui::Ui_MainWindow::placemesh(NiTriShapeRef nimesh)
 {
 
 }
+
 void getcasesout(QString etc)
 {
 hkroot=new hkRootLevelContainer();
@@ -159,7 +160,7 @@ hkroot=new hkRootLevelContainer();
       const aiScene* scene1;
       aiExportScene(scene1,"obj","hihh",0);
 	}
-	else if(etc.contains(".fbx",Qt::CaseSensitive)==true)
+	else if(etc.contains(".FBX",Qt::CaseSensitive)==true)
 	{
       //
 	}
@@ -177,6 +178,7 @@ void getcasesin(QString etc)
 	hkSerializeUtil::ErrorDetails* ers;
 	if(etc.contains(".hkx")==true)
 	{
+		QMessageBox::information(0,"hkx import","importing hkx");
 		hkIstream stream(etc.toStdString().c_str());
         hkResource* resource = hkSerializeUtil::load(stream.getStreamReader());
 		hkroot=new hkRootLevelContainer();
@@ -186,6 +188,7 @@ void getcasesin(QString etc)
 	
 	else if(etc.contains(".nif")==true)
 	{
+		QMessageBox::information(0,"nif import","importing nif");
         niparentobject=new NiObject();
 		niparentobject=ReadNifTree(etc.toStdString());
 		niparentnode=new NiNode();
@@ -198,6 +201,7 @@ void getcasesin(QString etc)
 	}
 	else if(etc.contains(".kfm")==true)
 	{
+		QMessageBox::information(0,"kfm import","importing kfm");
 		niparentobject=new NiObject();
 		niparentobject=ReadNifTree(etc.toStdString());
 		niparentnode=new NiNode();
@@ -208,15 +212,16 @@ void getcasesin(QString etc)
 			niparentfadenode=DynamicCast<BSFadeNode>(niparentobject);
 		}
 	}
-	else if(etc.contains(".fbx")==true)
+	else if(etc.contains(".FBX")==true)
 	{
+		QMessageBox::information(0,"fbx import","importing fbx");
 		fbximport(etc);
 	}
 	
 	else
 	{
+	QMessageBox::information(0,"assimp import","importing assimp formats");
       scene = aiImportFile((etc.toStdString().c_str()),aiProcessPreset_TargetRealtime_MaxQuality);
-	  
 	}
 }
 void Ui::Ui_MainWindow::importscene(void)
@@ -237,6 +242,7 @@ int HK_CALL main( int argc,char* argv[])
 	hkMallocAllocator baseMalloc;
 	hkMemoryRouter* memoryRouter = hkMemoryInitUtil::initDefault( &baseMalloc, hkMemorySystem::FrameInfo(1024 * 1024) );
 	hkBaseSystem::init( memoryRouter, errorReport );
+	glutInit(&argc,argv);
 	QApplication app(argc, argv);
 	QMainWindow *widget = new QMainWindow;
 	Ui::Ui_MainWindow ui;

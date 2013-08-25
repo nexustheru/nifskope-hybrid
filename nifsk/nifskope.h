@@ -3,6 +3,8 @@
 #include <Common\GeometryUtilities\hkGeometryUtilities.h>
 #include <niflib.h>
 #include <obj\NiTriShape.h>
+#include <glut.h>
+#include <Openglwindow.h>
 
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
@@ -27,11 +29,12 @@
 #include <qdesktopservices.h>
 #include <QtGui/qdesktopwidget.h>
 #include <QtGui\qmessagebox.h>
-
+#include <QtOpenGL\qglshaderprogram.h>
+#include <QtOpenGL\qglfunctions.h>
+#include <QtOpenGL\QtOpenGL>
 
 QT_BEGIN_NAMESPACE
 	
-
 namespace Ui 
 {
 class Ui_MainWindow : public QMainWindow
@@ -107,7 +110,6 @@ public:
     QGroupBox *groupBox;
     QTreeView *treeView;
     QLineEdit *lineEdit;
-    QGraphicsView *graphicsView;
     QGroupBox *groupBox_2;
     QPushButton *pushButton_7;
     QPushButton *pushButton_6;
@@ -123,6 +125,7 @@ public:
     QPushButton *pushButton_11;
     QComboBox *comboBox;
     QMenuBar *menubar;
+	openglwindow *widget;
     QMenu *menuFile;
     QMenu *menuImport;
     QMenu *menuExport;
@@ -138,8 +141,9 @@ public:
     QMenu *menuOptimize;
     QMenu *menuHelp;
     QStatusBar *statusbar;
-
 	char* thefilename;
+	private:
+		QTimer time;
 
 	//button events
 	public Q_SLOTS:
@@ -149,6 +153,7 @@ public:
 	void placemesh(hkMeshBody* hmesh);
 	void placemesh(FbxMesh* fmesh);
 	void placemesh(Niflib::NiTriShapeRef nimesh);
+
 	//
 	//functions
 
@@ -314,10 +319,6 @@ public:
         lineEdit = new QLineEdit(groupBox);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
         lineEdit->setGeometry(QRect(0, 10, 291, 20));
-        graphicsView = new QGraphicsView(centralwidget);
-        graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
-        graphicsView->setGeometry(QRect(320, 50, 661, 371));
-        graphicsView->viewport()->setProperty("cursor", QVariant(QCursor(Qt::ArrowCursor)));
         groupBox_2 = new QGroupBox(centralwidget);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
         groupBox_2->setGeometry(QRect(320, 0, 661, 41));
@@ -389,13 +390,16 @@ public:
         pushButton_10->setGeometry(QRect(410, 10, 41, 21));
         QIcon icon10;
         icon10.addFile(QString::fromUtf8("Resources/switch.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_10->setIcon(icon10);
+              pushButton_10->setIcon(icon10);
         pushButton_11 = new QPushButton(groupBox_2);
         pushButton_11->setObjectName(QString::fromUtf8("pushButton_11"));
         pushButton_11->setGeometry(QRect(540, 10, 121, 21));
         comboBox = new QComboBox(groupBox_2);
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
         comboBox->setGeometry(QRect(450, 10, 81, 22));
+        widget = new openglwindow(centralwidget);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(319, 49, 661, 381));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -512,8 +516,11 @@ public:
 
         retranslateUi(MainWindow);
 		//the buttonslink//
+        
 		QObject::connect(actionImport_3ds, SIGNAL(triggered(bool)), this, SLOT(importscene()));
 		QObject::connect(actionSave_as_2, SIGNAL(triggered(bool)), this, SLOT(exportscene()));
+
+		QObject::connect(actionPerspective, SIGNAL(triggered(bool)), this, SLOT(renderscene()));
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
  void retranslateUi(QMainWindow *MainWindow)
@@ -613,6 +620,5 @@ public:
     } // retranslateUi
  
 };
-
 
 } // namespace Ui

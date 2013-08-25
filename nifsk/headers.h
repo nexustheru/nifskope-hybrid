@@ -95,6 +95,7 @@
 #include <fbxsdk.h>
 
 
+
 static void HK_CALL errorReport(const char* msg, void* userContext)
 {
 	using namespace std;
