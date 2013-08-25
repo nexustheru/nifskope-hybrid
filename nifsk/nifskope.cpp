@@ -121,7 +121,6 @@ void Ui::Ui_MainWindow::placemesh(NiTriShapeRef nimesh)
 {
 
 }
-
 void getcasesout(QString etc)
 {
 hkroot=new hkRootLevelContainer();
@@ -236,6 +235,11 @@ void Ui::Ui_MainWindow::exportscene(void)
 	QString fileName = QFileDialog::getSaveFileName(this,
 	QObject::tr("Export File")," ",QObject::tr("File formats (*.nif *.kfm *.hkx *.hkt *.3DS *.DAE *.FBX *.ASE *.MDL *.X *.OBJ *.SMD *.BVH *.Ogre *.XML )"));
 	getcasesout(fileName);
+}
+void Ui::Ui_MainWindow::renderscene(void)
+{
+	
+
 }
 int HK_CALL main( int argc,char* argv[])
 {

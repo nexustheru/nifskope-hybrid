@@ -6,6 +6,7 @@ http://qt.digia.com/
 Havok
 http://www.havok.com/
 hkx,hkt format
+importer/exporter
 
 Figment 
 https://github.com/figment/hkxcmd
@@ -14,6 +15,12 @@ the behavior files
 Niflib
 https://github.com/niftools
 netimmerse format
+importer/exporter
+
+Fbx
+http://www.autodesk.com/products/fbx/overview
+fbx format
+importer/exporter
 
 Assimp
 https://github.com/assimp/assimp

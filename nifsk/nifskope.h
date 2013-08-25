@@ -142,8 +142,6 @@ public:
     QMenu *menuHelp;
     QStatusBar *statusbar;
 	char* thefilename;
-	private:
-		QTimer time;
 
 	//button events
 	public Q_SLOTS:
@@ -153,7 +151,7 @@ public:
 	void placemesh(hkMeshBody* hmesh);
 	void placemesh(FbxMesh* fmesh);
 	void placemesh(Niflib::NiTriShapeRef nimesh);
-
+	void renderscene(void);
 	//
 	//functions
 
@@ -519,7 +517,6 @@ public:
         
 		QObject::connect(actionImport_3ds, SIGNAL(triggered(bool)), this, SLOT(importscene()));
 		QObject::connect(actionSave_as_2, SIGNAL(triggered(bool)), this, SLOT(exportscene()));
-
 		QObject::connect(actionPerspective, SIGNAL(triggered(bool)), this, SLOT(renderscene()));
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi

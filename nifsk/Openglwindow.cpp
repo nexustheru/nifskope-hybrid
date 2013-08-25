@@ -18,6 +18,8 @@ void openglwindow::paintGL()
 {
     glRotatef(0.5,1,1,1);
 glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+//glBegin(GL_TRIANGLES);
+//glEnd();
 glutSolidTeapot(0.6);
 }
 
