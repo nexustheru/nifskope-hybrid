@@ -65,9 +65,7 @@ PLY
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-[IMG]http://i44.tinypic.com/mtkyfb.jpg[/IMG]
-
-<a href="http://tinypic.com?ref=mtkyfb" target="_blank"><img src="http://i44.tinypic.com/mtkyfb.jpg" border="0" alt="Image and video hosting by TinyPic"></a>
+<a href="http://tinypic.com?ref=amvma" target="_blank"><img src="http://i41.tinypic.com/amvma.jpg" border="0" alt="Image and video hosting by TinyPic"></a>
 
 
 
