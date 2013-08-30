@@ -2,807 +2,226 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>989</width>
-    <height>594</height>
+    <width>1170</width>
+    <height>664</height>
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>Nifskope</string>
+   <string>MainWindow</string>
   </property>
-  <property name="windowIcon">
-   <iconset resource="../../nifskope/nifskope.qrc">
-    <normaloff>:/res/nifskope.png</normaloff>
-    <normalon>:/res/nifskope.png</normalon>:/res/nifskope.png</iconset>
-  </property>
-  <widget class="QWidget" name="centralwidget">
-   <widget class="QTableWidget" name="tableWidget">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>440</y>
-      <width>971</width>
-      <height>111</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-   </widget>
-   <widget class="QGroupBox" name="groupBox">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>0</y>
-      <width>301</width>
-      <height>431</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string/>
-    </property>
-    <widget class="QTreeView" name="treeView">
-     <property name="geometry">
-      <rect>
-       <x>5</x>
-       <y>50</y>
-       <width>291</width>
-       <height>371</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>10</y>
-       <width>291</width>
-       <height>20</height>
-      </rect>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_2">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>0</y>
-      <width>661</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string/>
-    </property>
-    <widget class="QPushButton" name="pushButton_7">
-     <property name="geometry">
-      <rect>
-       <x>280</x>
-       <y>10</y>
-       <width>41</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset resource="../../nifskope/nifskope.qrc">
-       <normaloff>:/btn/play</normaloff>
-       <normalon>:/btn/play</normalon>:/btn/play</iconset>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_6">
-     <property name="geometry">
-      <rect>
-       <x>160</x>
-       <y>10</y>
-       <width>41</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset resource="../../nifskope/nifskope.qrc">
-       <normaloff>:/btn/viewWalk</normaloff>:/btn/viewWalk</iconset>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_2">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>10</y>
-       <width>41</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset resource="../../nifskope/nifskope.qrc">
-       <normaloff>:/btn/viewFront</normaloff>:/btn/viewFront</iconset>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_8">
-     <property name="geometry">
-      <rect>
-       <x>240</x>
-       <y>10</y>
-       <width>41</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset resource="../../nifskope/nifskope.qrc">
-       <normaloff>:/btn/viewPers</normaloff>:/btn/viewPers</iconset>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_5">
-     <property name="geometry">
-      <rect>
-       <x>200</x>
-       <y>10</y>
-       <width>41</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset resource="../../nifskope/nifskope.qrc">
-       <normaloff>:/btn/viewFlip</normaloff>:/btn/viewFlip</iconset>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_3">
-     <property name="geometry">
-      <rect>
-       <x>120</x>
-       <y>10</y>
-       <width>41</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset resource="../../nifskope/nifskope.qrc">
-       <normaloff>:/btn/viewUser</normaloff>:/btn/viewUser</iconset>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_4">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>10</y>
-       <width>41</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset resource="../../nifskope/nifskope.qrc">
-       <normaloff>:/btn/viewSide</normaloff>:/btn/viewSide</iconset>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>10</y>
-       <width>41</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset resource="../../nifskope/nifskope.qrc">
-       <normaloff>:/btn/viewTop</normaloff>
-       <normalon>:/btn/viewTop</normalon>:/btn/viewTop</iconset>
-     </property>
-     <property name="autoDefault">
-      <bool>false</bool>
-     </property>
-     <property name="default">
-      <bool>false</bool>
-     </property>
-     <property name="flat">
-      <bool>false</bool>
-     </property>
-    </widget>
-    <widget class="QSlider" name="horizontalSlider">
-     <property name="geometry">
-      <rect>
-       <x>330</x>
-       <y>10</y>
-       <width>41</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_9">
-     <property name="geometry">
-      <rect>
-       <x>370</x>
-       <y>10</y>
-       <width>41</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset resource="../../nifskope/nifskope.qrc">
-       <normaloff>:/btn/loop</normaloff>:/btn/loop</iconset>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_10">
-     <property name="geometry">
-      <rect>
-       <x>410</x>
-       <y>10</y>
-       <width>41</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset resource="../../nifskope/nifskope.qrc">
-       <normaloff>:/btn/switch</normaloff>:/btn/switch</iconset>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_11">
-     <property name="geometry">
-      <rect>
-       <x>540</x>
-       <y>10</y>
-       <width>121</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>reset block details</string>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="comboBox">
-     <property name="geometry">
-      <rect>
-       <x>450</x>
-       <y>10</y>
-       <width>81</width>
-       <height>22</height>
-      </rect>
-     </property>
-    </widget>
-   </widget>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
    <widget class="openglwindow" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>319</x>
-      <y>49</y>
-      <width>661</width>
-      <height>381</height>
+      <x>450</x>
+      <y>10</y>
+      <width>681</width>
+      <height>581</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>6</x>
+      <y>9</y>
+      <width>401</width>
+      <height>621</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>7</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Mesh</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Havok</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Skeleton</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>Animation</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_5">
+     <attribute name="title">
+      <string>Material</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_6">
+     <attribute name="title">
+      <string>Particles</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_7">
+     <attribute name="title">
+      <string>Header</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_8">
+     <attribute name="title">
+      <string>Treeview</string>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QSlider" name="verticalSlider">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>10</y>
+      <width>21</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>610</y>
+      <width>681</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="verticalSlider_2">
+    <property name="geometry">
+     <rect>
+      <x>1140</x>
+      <y>10</y>
+      <width>21</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>600</y>
+      <width>131</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Left|Right|Up|Down|Zoom</string>
     </property>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
+  <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>989</width>
+     <width>1170</width>
      <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
-     <string>file</string>
+     <string>File</string>
     </property>
-    <widget class="QMenu" name="menuImport">
-     <property name="title">
-      <string>Import</string>
-     </property>
-     <addaction name="actionImport_3ds"/>
-    </widget>
-    <widget class="QMenu" name="menuExport">
-     <property name="title">
-      <string>Export</string>
-     </property>
-     <addaction name="actionSave_as_2"/>
-    </widget>
-    <addaction name="separator"/>
-    <addaction name="menuExport"/>
-    <addaction name="menuImport"/>
-    <addaction name="actionAutosanitze_before_save"/>
-    <addaction name="actionNew_Window"/>
-    <addaction name="actionReaload_xml_and_nif"/>
-    <addaction name="actionReload_xml"/>
-    <addaction name="actionXml_checker"/>
-    <addaction name="actionResource_file"/>
+    <addaction name="actionImport_file"/>
+    <addaction name="actionExport_file"/>
+    <addaction name="actionClose"/>
    </widget>
-   <widget class="QMenu" name="menuView">
+   <widget class="QMenu" name="menuOptions">
     <property name="title">
-     <string>View</string>
+     <string>Options</string>
     </property>
-    <widget class="QMenu" name="menuBlock_list">
-     <property name="title">
-      <string>block list</string>
-     </property>
-     <addaction name="actionShow_blocks_in_tree"/>
-     <addaction name="actionShow_blocks_in_list"/>
-    </widget>
-    <widget class="QMenu" name="menuBlock_details">
-     <property name="title">
-      <string>block details</string>
-     </property>
-     <addaction name="actionHide_mismatched"/>
-     <addaction name="actionReset_block_details_2"/>
-    </widget>
-    <addaction name="actionReset_block_details"/>
-    <addaction name="actionInteractive_view"/>
-    <addaction name="actionBlock_list"/>
-    <addaction name="actionBlock_details"/>
-    <addaction name="actionFm"/>
-    <addaction name="actionInspect"/>
-    <addaction name="actionToolbars"/>
-    <addaction name="menuBlock_list"/>
-    <addaction name="menuBlock_details"/>
-    <addaction name="actionSelect_font"/>
    </widget>
    <widget class="QMenu" name="menuRender">
     <property name="title">
      <string>Render</string>
     </property>
-    <addaction name="actionTop"/>
-    <addaction name="actionWalk"/>
-    <addaction name="actionFront"/>
-    <addaction name="actionSide"/>
-    <addaction name="actionUser"/>
-    <addaction name="actionFlip"/>
-    <addaction name="actionPerspective"/>
-    <addaction name="actionSave_user_view"/>
-    <addaction name="actionDraw_axes"/>
-    <addaction name="actionDraw_nodes"/>
-    <addaction name="actionDraw_havok"/>
-    <addaction name="actionDraw_constraints"/>
-    <addaction name="actionDraw_furniture"/>
-    <addaction name="actionShow_hiddens"/>
-    <addaction name="actionSettings"/>
    </widget>
-   <widget class="QMenu" name="menuSpells">
+   <widget class="QMenu" name="menuInspector">
     <property name="title">
-     <string>Spells</string>
+     <string>Inspector</string>
     </property>
-    <widget class="QMenu" name="menuAnimation">
-     <property name="title">
-      <string>animation</string>
-     </property>
-     <addaction name="actionAttach_F"/>
-     <addaction name="actionEdit_string_palettes"/>
-    </widget>
-    <widget class="QMenu" name="menuBlock">
-     <property name="title">
-      <string>block</string>
-     </property>
-     <addaction name="actionInsert_by_id"/>
-     <addaction name="actionRemove_by_id"/>
-     <addaction name="actionSort"/>
-     <addaction name="actionSearch"/>
-    </widget>
-    <widget class="QMenu" name="menuSanitze">
-     <property name="title">
-      <string>sanitze</string>
-     </property>
-     <addaction name="actionReorder_link_arrays"/>
-     <addaction name="actionCollapse_link_arrays"/>
-     <addaction name="actionAdjust_texture_sources"/>
-     <addaction name="actionReorder_blocks"/>
-     <addaction name="actionCheck_links"/>
-    </widget>
-    <widget class="QMenu" name="menuBatch">
-     <property name="title">
-      <string>batch</string>
-     </property>
-     <addaction name="actionUppdate_all_MOPP_code"/>
-     <addaction name="actionMake_all_skin_partions"/>
-     <addaction name="actionUpdate_all_tangent_spaces"/>
-     <addaction name="actionMulti_apply_mode"/>
-    </widget>
-    <widget class="QMenu" name="menuOptimize">
-     <property name="title">
-      <string>optimize</string>
-     </property>
-     <addaction name="actionCombine_properties"/>
-     <addaction name="actionSplit_properties"/>
-     <addaction name="actionRemove_bogus_nodes"/>
-     <addaction name="actionStripify_all_tri_shapes"/>
-    </widget>
-    <addaction name="menuAnimation"/>
-    <addaction name="menuBlock"/>
-    <addaction name="menuSanitze"/>
-    <addaction name="menuBatch"/>
-    <addaction name="menuOptimize"/>
    </widget>
-   <widget class="QMenu" name="menuHelp">
+   <widget class="QMenu" name="menuAbout">
     <property name="title">
-     <string>Help</string>
+     <string>About</string>
     </property>
-    <addaction name="actionInteractive_help"/>
-    <addaction name="actionNifskope_documentation_and_tutorials"/>
-    <addaction name="actionNifskope_help_and_bug"/>
-    <addaction name="actionWiki"/>
-    <addaction name="actionDownloads"/>
-    <addaction name="actionAbout_qt"/>
-    <addaction name="actionAbout_nifskope"/>
+   </widget>
+   <widget class="QMenu" name="menuUpdate">
+    <property name="title">
+     <string>Update</string>
+    </property>
    </widget>
    <addaction name="menuFile"/>
-   <addaction name="menuView"/>
+   <addaction name="menuOptions"/>
    <addaction name="menuRender"/>
-   <addaction name="menuSpells"/>
-   <addaction name="menuHelp"/>
+   <addaction name="menuInspector"/>
+   <addaction name="menuAbout"/>
+   <addaction name="menuUpdate"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionLoad">
+  <action name="actionImport_file">
    <property name="text">
-    <string>Load</string>
+    <string>Import file</string>
    </property>
   </action>
-  <action name="actionAutosanitze_before_save">
+  <action name="actionExport_file">
    <property name="text">
-    <string>Autosanitze before save</string>
+    <string>Export file</string>
    </property>
   </action>
-  <action name="actionNew_Window">
+  <action name="actionClose">
    <property name="text">
-    <string>New Window</string>
-   </property>
-  </action>
-  <action name="actionReaload_xml_and_nif">
-   <property name="text">
-    <string>Reaload xml and nif</string>
-   </property>
-  </action>
-  <action name="actionReload_xml">
-   <property name="text">
-    <string>Reload xml</string>
-   </property>
-  </action>
-  <action name="actionXml_checker">
-   <property name="text">
-    <string>xml checker</string>
-   </property>
-  </action>
-  <action name="actionResource_file">
-   <property name="text">
-    <string>Resource file</string>
-   </property>
-  </action>
-  <action name="actionImport_3ds">
-   <property name="text">
-    <string>Load file</string>
-   </property>
-  </action>
-  <action name="actionImport_obj">
-   <property name="text">
-    <string>import obj</string>
-   </property>
-  </action>
-  <action name="actionExport_3ds">
-   <property name="text">
-    <string>export 3ds</string>
-   </property>
-  </action>
-  <action name="actionReset_block_details">
-   <property name="text">
-    <string>Reset block details</string>
-   </property>
-  </action>
-  <action name="actionInteractive_view">
-   <property name="text">
-    <string>interactive help</string>
-   </property>
-  </action>
-  <action name="actionBlock_list">
-   <property name="text">
-    <string>block list</string>
-   </property>
-  </action>
-  <action name="actionBlock_details">
-   <property name="text">
-    <string>block details</string>
-   </property>
-  </action>
-  <action name="actionFm">
-   <property name="text">
-    <string>Fm</string>
-   </property>
-  </action>
-  <action name="actionInspect">
-   <property name="text">
-    <string>inspect</string>
-   </property>
-  </action>
-  <action name="actionToolbars">
-   <property name="text">
-    <string>toolbars</string>
-   </property>
-  </action>
-  <action name="actionSelect_font">
-   <property name="text">
-    <string>select font</string>
-   </property>
-  </action>
-  <action name="actionTop">
-   <property name="text">
-    <string>top</string>
-   </property>
-  </action>
-  <action name="actionWalk">
-   <property name="text">
-    <string>walk</string>
-   </property>
-  </action>
-  <action name="actionFront">
-   <property name="text">
-    <string>front</string>
-   </property>
-  </action>
-  <action name="actionSide">
-   <property name="text">
-    <string>side</string>
-   </property>
-  </action>
-  <action name="actionUser">
-   <property name="text">
-    <string>user</string>
-   </property>
-  </action>
-  <action name="actionFlip">
-   <property name="text">
-    <string>flip</string>
-   </property>
-  </action>
-  <action name="actionPerspective">
-   <property name="text">
-    <string>perspective</string>
-   </property>
-  </action>
-  <action name="actionSave_user_view">
-   <property name="text">
-    <string>save user view</string>
-   </property>
-  </action>
-  <action name="actionDraw_axes">
-   <property name="text">
-    <string>draw axes</string>
-   </property>
-  </action>
-  <action name="actionDraw_nodes">
-   <property name="text">
-    <string>draw nodes</string>
-   </property>
-  </action>
-  <action name="actionDraw_havok">
-   <property name="text">
-    <string>draw havok</string>
-   </property>
-  </action>
-  <action name="actionDraw_constraints">
-   <property name="text">
-    <string>draw constraints</string>
-   </property>
-  </action>
-  <action name="actionDraw_furniture">
-   <property name="text">
-    <string>draw furniture</string>
-   </property>
-  </action>
-  <action name="actionShow_hiddens">
-   <property name="text">
-    <string>show hiddens</string>
-   </property>
-  </action>
-  <action name="actionSettings">
-   <property name="text">
-    <string>settings</string>
-   </property>
-  </action>
-  <action name="actionInteractive_help">
-   <property name="text">
-    <string>interactive help</string>
-   </property>
-  </action>
-  <action name="actionNifskope_documentation_and_tutorials">
-   <property name="text">
-    <string>nifskope documentation and tutorials</string>
-   </property>
-  </action>
-  <action name="actionNifskope_help_and_bug">
-   <property name="text">
-    <string>nifskope help and bug</string>
-   </property>
-  </action>
-  <action name="actionWiki">
-   <property name="text">
-    <string>wiki</string>
-   </property>
-  </action>
-  <action name="actionDownloads">
-   <property name="text">
-    <string>downloads</string>
-   </property>
-  </action>
-  <action name="actionAbout_qt">
-   <property name="text">
-    <string>about qt</string>
-   </property>
-  </action>
-  <action name="actionAbout_nifskope">
-   <property name="text">
-    <string>about nifskope</string>
-   </property>
-  </action>
-  <action name="actionAttach_F">
-   <property name="text">
-    <string>attach F</string>
-   </property>
-  </action>
-  <action name="actionEdit_string_palettes">
-   <property name="text">
-    <string>edit string palettes</string>
-   </property>
-  </action>
-  <action name="actionInsert_by_id">
-   <property name="text">
-    <string>insert</string>
-   </property>
-  </action>
-  <action name="actionRemove_by_id">
-   <property name="text">
-    <string>remove by id</string>
-   </property>
-  </action>
-  <action name="actionSort">
-   <property name="text">
-    <string>sort by name</string>
-   </property>
-  </action>
-  <action name="actionSearch">
-   <property name="text">
-    <string>search</string>
-   </property>
-  </action>
-  <action name="actionReorder_link_arrays">
-   <property name="text">
-    <string>reorder link arrays</string>
-   </property>
-  </action>
-  <action name="actionCollapse_link_arrays">
-   <property name="text">
-    <string>collapse link arrays</string>
-   </property>
-  </action>
-  <action name="actionAdjust_texture_sources">
-   <property name="text">
-    <string>adjust texture sources</string>
-   </property>
-  </action>
-  <action name="actionReorder_blocks">
-   <property name="text">
-    <string>reorder blocks</string>
-   </property>
-  </action>
-  <action name="actionCheck_links">
-   <property name="text">
-    <string>check links</string>
-   </property>
-  </action>
-  <action name="actionUppdate_all_MOPP_code">
-   <property name="text">
-    <string>uppdate all MOPP code</string>
-   </property>
-  </action>
-  <action name="actionMake_all_skin_partions">
-   <property name="text">
-    <string>make all skin partions</string>
-   </property>
-  </action>
-  <action name="actionUpdate_all_tangent_spaces">
-   <property name="text">
-    <string>update all tangent spaces</string>
-   </property>
-  </action>
-  <action name="actionMulti_apply_mode">
-   <property name="text">
-    <string>multi apply mode</string>
-   </property>
-  </action>
-  <action name="actionCombine_properties">
-   <property name="text">
-    <string>combine properties</string>
-   </property>
-  </action>
-  <action name="actionSplit_properties">
-   <property name="text">
-    <string>split properties</string>
-   </property>
-  </action>
-  <action name="actionRemove_bogus_nodes">
-   <property name="text">
-    <string>remove bogus nodes</string>
-   </property>
-  </action>
-  <action name="actionStripify_all_tri_shapes">
-   <property name="text">
-    <string>stripify all tri shapes</string>
-   </property>
-  </action>
-  <action name="actionShow_blocks_in_tree">
-   <property name="text">
-    <string>show blocks in tree</string>
-   </property>
-  </action>
-  <action name="actionShow_blocks_in_list">
-   <property name="text">
-    <string>show blocks in list</string>
-   </property>
-  </action>
-  <action name="actionHide_mismatched">
-   <property name="text">
-    <string>hide version mismatched rows</string>
-   </property>
-  </action>
-  <action name="actionReset_block_details_2">
-   <property name="text">
-    <string>reset block details</string>
-   </property>
-  </action>
-  <action name="actionSave_as_2">
-   <property name="text">
-    <string>Save as</string>
+    <string>Close</string>
    </property>
   </action>
  </widget>
+ <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
    <class>openglwindow</class>
    <extends>QWidget</extends>
-   <header>openglwindow.h</header>
+   <header>Openglwindow.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources>
-  <include location="../../nifskope/nifskope.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

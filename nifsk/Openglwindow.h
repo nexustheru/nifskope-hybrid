@@ -2,7 +2,9 @@
 #define OPENGLG_H
 #include <QGLWidget>
 #include <QTimer>
-#include <glut.h>
+#include <assimp\scene.h>
+#include <assimp\mesh.h>
+#include <gl\glut.h>
 
 class openglwindow :public QGLWidget
 {
@@ -13,6 +15,7 @@ public:
     void initializeGL();
     void paintGL();
     void resizeGL(int w, int h);
+	static int loadassfile(const aiScene* tscene);
 private:
 QTimer time;
 

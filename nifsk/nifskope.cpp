@@ -97,14 +97,7 @@ void nifexport(void)
 {
 
 }
-void asimpimport(void)
-{
 
-}
-void asimpexport(void)
-{
-
-}
 void Ui::Ui_MainWindow::placemesh(const aiMesh* mesh)
 {
 	
@@ -174,6 +167,7 @@ hkroot=new hkRootLevelContainer();
 }
 void getcasesin(QString etc)
 {
+
 	hkSerializeUtil::ErrorDetails* ers;
 	if(etc.contains(".hkx")==true)
 	{
@@ -221,6 +215,7 @@ void getcasesin(QString etc)
 	{
 	QMessageBox::information(0,"assimp import","importing assimp formats");
       scene = aiImportFile((etc.toStdString().c_str()),aiProcessPreset_TargetRealtime_MaxQuality);
+	  openglwindow::loadassfile(scene);
 	}
 }
 void Ui::Ui_MainWindow::importscene(void)
