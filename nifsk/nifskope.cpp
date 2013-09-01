@@ -214,8 +214,9 @@ void getcasesin(QString etc)
 	else
 	{
 	QMessageBox::information(0,"assimp import","importing assimp formats");
-      scene = aiImportFile((etc.toStdString().c_str()),aiProcessPreset_TargetRealtime_MaxQuality);
-	  openglwindow::loadassfile(scene);
+
+	  openglwindow glp;
+	  glp.getfile(etc.toStdString().c_str());
 	}
 }
 void Ui::Ui_MainWindow::importscene(void)

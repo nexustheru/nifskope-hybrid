@@ -17,6 +17,7 @@
 #include <QtGui/QMenuBar>
 #include <QtGui/QSlider>
 #include <QtGui/QTabWidget>
+#include <QtGui/QTreeWidget>
 #include <QtGui/QWidget>
 #include "Openglwindow.h"
 #include <QTGui/qfiledialog.h>
@@ -54,6 +55,7 @@ public:
 	QSlider *horizontalSlider;
 	QSlider *verticalSlider_2;
 	QLabel *label;
+	QTreeWidget *treeWidget;
 	QMenuBar *menuBar;
 	QMenu *menuFile;
 	QMenu *menuOptions;
@@ -72,9 +74,6 @@ public:
 	void placemesh(FbxMesh* fmesh);
 	void placemesh(Niflib::NiTriShapeRef nimesh);
 	void renderscene(void);
-
-	
-	
 	//
 	//functions
 
@@ -130,6 +129,13 @@ public:
 		tabWidget->addTab(tab_7, QString());
 		tab_8 = new QWidget();
 		tab_8->setObjectName(QString::fromUtf8("tab_8"));
+		treeWidget = new QTreeWidget(tab_8);
+		QTreeWidgetItem *__qtreewidgetitem = new QTreeWidgetItem();
+		__qtreewidgetitem->setText(0, QString::fromUtf8("1"));
+		treeWidget->setHeaderItem(__qtreewidgetitem);
+		treeWidget->setObjectName(QString::fromUtf8("treeWidget"));
+		treeWidget->setGeometry(QRect(10, 10, 371, 571));
+		tabWidget->addTab(tab_8, QString());
 		tabWidget->addTab(tab_8, QString());
 		verticalSlider = new QSlider(centralWidget);
 		verticalSlider->setObjectName(QString::fromUtf8("verticalSlider"));
