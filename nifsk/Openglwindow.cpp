@@ -30,12 +30,14 @@ void openglwindow::initializeGL()
 }
 void openglwindow::getfile(const char* fname)
 {
-	fnam=fname;
+	//fnam=fname;
+	di=aiImportFile(fname,aiProcessPreset_TargetRealtime_MaxQuality);
+	//QMessageBox::information(0,"g",fnam);
 }
 
 void openglwindow::paintGL()
 {
-	if(fnam== NULL)
+	if(di==NULL)
     { 
 	glRotatef(0.5,1,1,1);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -43,9 +45,9 @@ void openglwindow::paintGL()
     }
 	else
 	{
-		glRotatef(0.5,1,1,1);
+	glRotatef(0.5,1,1,1);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	di=aiImportFile("hairm.obj",aiProcessPreset_TargetRealtime_MaxQuality);
+	
 
 	for (unsigned int i=0 ;i < di->mNumMeshes; i++)
 	{
