@@ -1,5 +1,4 @@
 #include <assimp\mesh.h>
-#include <fbxsdk.h>
 #include <Common\GeometryUtilities\hkGeometryUtilities.h>
 #include <niflib.h>
 #include <obj\NiTriShape.h>
@@ -69,11 +68,7 @@ public:
 	public Q_SLOTS:
     void importscene(void);
 	void exportscene(void);
-	void placemesh(const aiMesh* mesh);
-	void placemesh(hkMeshBody* hmesh);
-	void placemesh(FbxMesh* fmesh);
-	void placemesh(Niflib::NiTriShapeRef nimesh);
-	void renderscene(void);
+	void zio(void);
 	//
 	//functions
 
@@ -145,6 +140,7 @@ public:
 		horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
 		horizontalSlider->setGeometry(QRect(450, 610, 681, 20));
 		horizontalSlider->setOrientation(Qt::Horizontal);
+		horizontalSlider->setValue(50);
 		verticalSlider_2 = new QSlider(centralWidget);
 		verticalSlider_2->setObjectName(QString::fromUtf8("verticalSlider_2"));
 		verticalSlider_2->setGeometry(QRect(1140, 10, 21, 581));
@@ -183,9 +179,9 @@ public:
 		retranslateUi(MainWindow);
 
 		tabWidget->setCurrentIndex(7);
-        
 		QObject::connect(actionImport_file, SIGNAL(triggered(bool)), this, SLOT(importscene()));
 		QObject::connect(actionExport_file, SIGNAL(triggered(bool)), this, SLOT(exportscene()));
+		QObject::connect(horizontalSlider, SIGNAL(sliderMoved(int)), this, SLOT(zio()));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi

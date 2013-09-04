@@ -30,89 +30,11 @@ FbxManager* manager;
 FbxMesh* fmesh;
 FbxNode* fnode;
 //globals/////////////////////////////////////////////////////////////////////////////////////////////////
-
-void fbximport(QString fileName)
+void Ui::Ui_MainWindow::zio(void)
 {
-manager = FbxManager::Create();
-FbxIOSettings *ioSettings = FbxIOSettings::Create(manager, IOSROOT);
-ioSettings->SetBoolProp(EXP_FBX_MATERIAL,        true);
-ioSettings->SetBoolProp(EXP_FBX_TEXTURE,         true);
-ioSettings->SetBoolProp(EXP_FBX_EMBEDDED,        true);
-ioSettings->SetBoolProp(EXP_FBX_SHAPE,           true);
-ioSettings->SetBoolProp(EXP_FBX_GOBO,            true);
-ioSettings->SetBoolProp(EXP_FBX_ANIMATION,       true);
-ioSettings->SetBoolProp(EXP_FBX_GLOBAL_SETTINGS, true);
-manager->SetIOSettings(ioSettings);
-FbxImporter *importer=FbxImporter::Create(manager,"");
-const bool result= importer->Initialize(fileName.toStdString().c_str(),-1,manager->GetIOSettings());
-if(!result)
-     {
-       QMessageBox::information(0,"error",importer->GetStatus().GetErrorString());
-     }
-     else
-     {
-       FbxScene *scene = FbxScene::Create(manager,"tempName");
-       importer->Import(scene);
-       importer->Destroy();
-       FbxNode* rootNode=scene->GetRootNode();
-       QMessageBox::information(0,"fbx","import fbx ok!"); 
-       FbxMesh* mesh = NULL;
-	   FbxGeometryConverter convert(manager);
-	   for (int childi = 0; childi < rootNode->GetChildCount(true); ++ childi)
-	   {
-		
-		if(mesh=rootNode->GetChild(childi)->GetMesh())
-		{
-			QMessageBox::information(0,"fbx","MESH FOUND!");
-			break;
-		}
-
-		if(mesh->IsTriangleMesh()==false)
-		{
-            QMessageBox::information(0,"optimizing","TRIANGLUALTING MESH!");
-			convert.TriangulateInPlace(scene->GetRootNode()->GetChild(0));
-			break;
-		}
-		mesh=rootNode->GetChild(childi)->GetMesh();
-	  }
-    }
-}
-void fbxexport(QString fileName)
-{
-
-}
-void havokimport(void)
-{
-
-}
-void havokexport(void)
-{
-
-}
-void nifimport(void)
-{
-
-}
-void nifexport(void)
-{
-
-}
-
-void Ui::Ui_MainWindow::placemesh(const aiMesh* mesh)
-{
+	int res=Ui::Ui_MainWindow::horizontalSlider->value();
 	
-	
-}
-void Ui::Ui_MainWindow::placemesh(hkMeshBody* hmesh)
-{
-
-}
-void Ui::Ui_MainWindow::placemesh(FbxMesh* fmesh)
-{
-}
-void Ui::Ui_MainWindow::placemesh(NiTriShapeRef nimesh)
-{
-
+	gluLookAt(static_cast<double>(res),0,5,0,0,0,0,1,0);
 }
 void getcasesout(QString etc)
 {
@@ -167,55 +89,24 @@ hkroot=new hkRootLevelContainer();
 }
 void getcasesin(QString etc)
 {
-
+	openglwindow glp;
 	hkSerializeUtil::ErrorDetails* ers;
 	if(etc.contains(".hkx")==true)
 	{
 		QMessageBox::information(0,"hkx import","importing hkx");
-		hkIstream stream(etc.toStdString().c_str());
-        hkResource* resource = hkSerializeUtil::load(stream.getStreamReader());
-		hkroot=new hkRootLevelContainer();
-		hkroot = resource->getContents<hkRootLevelContainer>();
+		 glp.getfileh(etc.toStdString().c_str());
 		
 	}
 	
 	else if(etc.contains(".nif")==true)
 	{
 		QMessageBox::information(0,"nif import","importing nif");
-        niparentobject=new NiObject();
-		niparentobject=ReadNifTree(etc.toStdString());
-		niparentnode=new NiNode();
-        niparentnode=DynamicCast<NiNode>(niparentobject);
-		if(niparentnode==NULL)
-		{
-			niparentfadenode=new BSFadeNode();
-			niparentfadenode=DynamicCast<BSFadeNode>(niparentobject);
-		}
+		glp.getfilen(etc.toStdString().c_str());
+        
 	}
-	else if(etc.contains(".kfm")==true)
-	{
-		QMessageBox::information(0,"kfm import","importing kfm");
-		niparentobject=new NiObject();
-		niparentobject=ReadNifTree(etc.toStdString());
-		niparentnode=new NiNode();
-        niparentnode=DynamicCast<NiNode>(niparentobject);
-		if(niparentnode==NULL)
-		{
-			niparentfadenode=new BSFadeNode();
-			niparentfadenode=DynamicCast<BSFadeNode>(niparentobject);
-		}
-	}
-	else if(etc.contains(".FBX")==true)
-	{
-		QMessageBox::information(0,"fbx import","importing fbx");
-		fbximport(etc);
-	}
-	
 	else
 	{
-	QMessageBox::information(0,"assimp import","importing assimp formats");
-
-	  openglwindow glp;
+	  QMessageBox::information(0,"assimp import","importing assimp formats");
 	  glp.getfile(etc.toStdString().c_str());
 	}
 }
@@ -231,11 +122,6 @@ void Ui::Ui_MainWindow::exportscene(void)
 	QString fileName = QFileDialog::getSaveFileName(this,
 	QObject::tr("Export File")," ",QObject::tr("File formats (*.nif *.kfm *.hkx *.hkt *.3DS *.DAE *.FBX *.ASE *.MDL *.X *.OBJ *.SMD *.BVH *.Ogre *.XML )"));
 	getcasesout(fileName);
-}
-void Ui::Ui_MainWindow::renderscene(void)
-{
-	
-
 }
 int HK_CALL main( int argc,char* argv[])
 {

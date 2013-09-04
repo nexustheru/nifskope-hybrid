@@ -12,6 +12,7 @@
 #include <assimp\postprocess.h>
 #include <gl\glut.h>
 
+
 class openglwindow :public QGLWidget
 {
 	Q_OBJECT
@@ -22,6 +23,9 @@ public:
     void paintGL();
     void resizeGL(int w, int h);
 	void getfile(const char* fname);
+	void getfilen(const char* fname);
+	void getfileh(const char* fname);
+	
 
 private:
 QTimer time;

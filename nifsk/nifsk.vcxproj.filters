@@ -1482,6 +1482,12 @@
     <ClInclude Include="behaviorincludes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="nifh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="glmesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />
